@@ -5,7 +5,7 @@ using BNG;
 
 public class LockXRotation : MonoBehaviour
 {
-    private bool IsLock;
+    public bool IsLock;
     private void Start()
     {
         IsLock = false;
@@ -18,18 +18,13 @@ public class LockXRotation : MonoBehaviour
         {
             IsLock = true;
             IsLock = joint.LockXRotation;
-            Debug.Log("Now");
+            Debug.Log("Lock X Rotation now");
         }
-        else if(IsLock)
-        {
-            IsLock = false;
-            IsLock = joint.LockXRotation;
-            Debug.Log("Here-Unlock");
-        }
+
     }
     private void Update()
     {
-        Debug.Log(IsLock);
+        //Debug.Log(IsLock);
     }
 
 }

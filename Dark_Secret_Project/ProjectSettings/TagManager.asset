@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ZiplineHead
   - HookSpot
+  - Clipper
   layers:
   - Default
   - TransparentFX

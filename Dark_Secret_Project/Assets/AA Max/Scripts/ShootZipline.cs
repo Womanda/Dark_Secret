@@ -9,6 +9,7 @@ public class ShootZipline : MonoBehaviour
 {
     public GameObject Head;
     public GameObject GunGrab;
+    public ClipOnZipline clip;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("ZiplineHead"))
@@ -17,6 +18,7 @@ public class ShootZipline : MonoBehaviour
             Destroy(GunGrab.GetComponent<Grabbable>());
             Destroy(GunGrab.GetComponent<CapsuleCollider>());
             Destroy(Head.GetComponent<Animator>());
+            clip.Attached = true;
             Debug.Log("HIT!");
 
         }
