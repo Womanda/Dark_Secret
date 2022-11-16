@@ -453,7 +453,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8152476818487459928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cdea428d48e2bb488d33d5f75c39bb9, type: 3}
   m_Name: 
@@ -865,7 +865,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6017032171167774208}
         m_TargetAssemblyTypeName: PowerBlock, Assembly-CSharp
-        m_MethodName: RotateBlock
+        m_MethodName: OnPush
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
