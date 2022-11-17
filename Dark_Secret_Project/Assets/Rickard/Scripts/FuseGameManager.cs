@@ -33,8 +33,17 @@ public class FuseGameManager : MonoBehaviour
                 MakeAChild(spawnDecider[y, x], y, x);
             }
         }
+
+        StartCoroutine(InitBlocks());
     }
 
+    IEnumerator InitBlocks()
+    {
+        yield return new WaitForSeconds(0.1f);
+        powerBlocks[3, 0].OnPush();
+        yield return new WaitForSeconds(0.1f);
+        powerBlocks[3, 0].OnPush();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -66,9 +75,16 @@ public class FuseGameManager : MonoBehaviour
     public void UpdateBox()
     {
         Debug.Log("Updating Box Grid");
+        resetLoop();
+        BlockLoop();
+        BlockLoop();
+        BlockLoop();
+        BlockLoop();
+        BlockLoop();
         BlockLoop();
         if (finish)
-            Debug.Log("You won!");
+            FinnishLoop();
+        ColorLoop();
     }
 
     public void Snaking()
@@ -108,7 +124,7 @@ public class FuseGameManager : MonoBehaviour
                 if (x != powerBlocks.GetLength(1) - 1)
                     powerBlocks[y, x].CheckRight(powerBlocks[y, x + 1]);
 
-
+                powerBlocks[y, x].ResolvePoweredStatus();
                 
 
                 if (y == 2 && x == 0)
@@ -116,6 +132,46 @@ public class FuseGameManager : MonoBehaviour
 
                 if (y == 0 && x == powerBlocks.GetLength(1) - 1)
                     finish = powerBlocks[y, x].CheckFinish();
+
+            }
+        }
+
+
+    }
+    private void resetLoop()
+    {
+        for (int y = 0; y < powerBlocks.GetLength(0); y++)
+        {
+            for (int x = 0; x < powerBlocks.GetLength(1); x++)
+            {
+                powerBlocks[y, x].PowerUP(false);
+
+            }
+        }
+
+
+    }
+    private void FinnishLoop()
+    {
+        for (int y = 0; y < powerBlocks.GetLength(0); y++)
+        {
+            for (int x = 0; x < powerBlocks.GetLength(1); x++)
+            {
+                powerBlocks[y, x].Finsish();
+
+            }
+        }
+
+
+    }
+
+    private void ColorLoop()
+    {
+        for (int y = 0; y < powerBlocks.GetLength(0); y++)
+        {
+            for (int x = 0; x < powerBlocks.GetLength(1); x++)
+            {
+                powerBlocks[y, x].ResolveColors();
 
             }
         }

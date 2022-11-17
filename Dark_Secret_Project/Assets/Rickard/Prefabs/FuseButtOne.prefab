@@ -529,8 +529,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda8a5ec8bc70ab4685f4bab11a269d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gate: 00010100
+  gate: 00000101
   powered: 0
+  renderer: {fileID: 2496015194274922979}
+  cordRenderer:
+  - {fileID: 6247716288770367364}
+  - {fileID: 8156169059957183813}
+  gridLocalX: 0
+  gridLocalY: 0
 --- !u!1 &2496015194274922783
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +909,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9085418860860865640}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.025, y: 0.5, z: 0.25}
+  m_LocalPosition: {x: -0.025, y: 0.5, z: -0.246}
   m_LocalScale: {x: 0.01, y: 0.25, z: 0.07}
   m_ConstrainProportionsScale: 0
   m_Children: []

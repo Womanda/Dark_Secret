@@ -13,8 +13,17 @@ public class PowerBlock : MonoBehaviour
     [SerializeField]
     bool powered = false;
 
+    [SerializeField]
+    MeshRenderer renderer;
+
+    [SerializeField]
+    MeshRenderer[] cordRenderer;
+
     public int gridLocalX;
     public int gridLocalY;
+    
+
+    bool gameIsFInished = false;
 
 
 
@@ -23,18 +32,49 @@ public class PowerBlock : MonoBehaviour
     void Start()
     {
         thisGameObject = gameObject;
+        
+    }
+
+    public void ColorNoPower()
+    {
+        renderer.material.color = Color.red;
+        for (int i = 0; i < cordRenderer.Length; i++)
+        {
+            cordRenderer[i].material.color = Color.white;
+        }
+    }
+
+    public void ColorPowerOn()
+    {
+        renderer.material.color = Color.green;
+        for (int i = 0; i < cordRenderer.Length; i++)
+        {
+            cordRenderer[i].material.color = Color.yellow;
+        }
+    }
+
+    public void ColorFinish()
+    {
+        renderer.material.color = Color.blue;
+        for (int i = 0; i < cordRenderer.Length; i++)
+        {
+            cordRenderer[i].material.color = Color.yellow;
+        }
     }
 
     private void Update()
     {
-        if (!powered)
-            return;
+     
+
     }
 
     public void OnPush()
     {
-        RotateBlock();
-        fuseGameManager.UpdateBox();
+        if (!gameIsFInished)
+        {
+            RotateBlock();
+            fuseGameManager.UpdateBox();
+        }
     }
     public void RotateBlock()
     {
@@ -70,12 +110,13 @@ public class PowerBlock : MonoBehaviour
         fuseGameManager = fGM;
     }
 
-    public bool CheckStart()
+    public void CheckStart()
     {
         if (gate[3])
-            return true;
+            powered = true;
         else
-            return false;
+            powered = false;
+           
     }
 
     public bool CheckFinish()
@@ -89,63 +130,82 @@ public class PowerBlock : MonoBehaviour
     public void CheckUp(PowerBlock pBlock)
     {
         Debug.Log("Checking up");
-        if (pBlock.CheckGate(2) && gate[0] && powered)
+        if (pBlock.CheckGate(2) && gate[0] && pBlock.CheckPowered())
         {
-            pBlock.PowerUP(true);
+            powerdGate[0] = true;
             Debug.Log("Checking up, Got POWER on Gate 0" + " X = " + gridLocalX + " Y = " + gridLocalY);
         }
         else if(powered)
-            pBlock.PowerUP(false);
+            powerdGate[0] = false;
     }
     public void CheckRight(PowerBlock pBlock)
     {
         Debug.Log("Checking Right");
-        if (pBlock.CheckGate(3) && gate[1] && powered)
+        if (pBlock.CheckGate(3) && gate[1] && pBlock.CheckPowered())
         {
-            pBlock.PowerUP(true);
+            powerdGate[1] = true;
             Debug.Log("Checking Right, Got POWER on Gate 1" + " X = " + gridLocalX + " Y = " + gridLocalY);
         }
         else if(powered)
-            pBlock.PowerUP(false);
+            powerdGate[1] = false;
     }
     public void CheckDown(PowerBlock pBlock)
     {
         Debug.Log("Checking Down");
-        if (pBlock.CheckGate(0) && gate[2] && powered)
+        if (pBlock.CheckGate(0) && gate[2] && pBlock.CheckPowered())
         {
-            pBlock.PowerUP(true);
+            powerdGate[2] = true;
             Debug.Log("Checking Down, Got POWER on Gate 2" + " X = " + gridLocalX + " Y = " + gridLocalY);
         }
         else if (powered)
-            pBlock.PowerUP(false);
+            powerdGate[2] = false;
     }
     public void CheckLeft(PowerBlock pBlock)
     {
         Debug.Log("Checking Left");
-        if (pBlock.CheckGate(1) && gate[3] && powered)
+        if (pBlock.CheckGate(1) && gate[3] && pBlock.CheckPowered())
         {
-            pBlock.PowerUP(true);
+            powerdGate[3] = true;
             Debug.Log("Checking Left, Got POWER on Gate 3" + " X = " + gridLocalX + " Y = " + gridLocalY);
         }
         else if (powered)
-            pBlock.PowerUP(false);
+            powerdGate[3] = false;
     }
 
     public void ResolvePoweredStatus()
     {
-        int poweredGates = 0;
+        int powerGate = 0;
         for (int i = 0; i < powerdGate.Length; i++)
         {
             if (powerdGate[i])
-                poweredGates++;
+            {
+                powerGate++;
+            }
         }
-        if (poweredGates < 2 && powered)
+        if (powerGate != 0)
+        {
+            powered = true;
+        }
+        else
         {
             powered = false;
         }
-        else if (poweredGates == 1 && !powered)
-            powered = true;
         
+    }
+    public void ResolveColors()
+    {
+        if (powered && !gameIsFInished)
+        {
+            ColorPowerOn();
+        }
+        if (!powered && !gameIsFInished)
+        {
+            ColorNoPower();
+        }
+        if (gameIsFInished && powered)
+        {
+            ColorFinish();
+        }
     }
 
     public bool SnakeCheck(PowerBlock pBlock, int pathIndex)
@@ -171,5 +231,14 @@ public class PowerBlock : MonoBehaviour
     public void PowerUP(bool value)
     {
         powered = value;
+        for (int i = 0; i < powerdGate.Length; i++)
+        {
+            powerdGate[i] = value;
+        }
+    }
+
+    public void Finsish()
+    {
+        gameIsFInished = true;
     }
 }

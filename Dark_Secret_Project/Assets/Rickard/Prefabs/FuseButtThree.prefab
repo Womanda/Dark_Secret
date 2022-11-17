@@ -677,6 +677,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gate: 00010001
   powered: 0
+  renderer: {fileID: 8152476820311088579}
+  cordRenderer:
+  - {fileID: 2499570819584493925}
+  - {fileID: 266724529254061518}
+  gridLocalX: 0
+  gridLocalY: 0
 --- !u!1 &8152476820311088447
 GameObject:
   m_ObjectHideFlags: 0
