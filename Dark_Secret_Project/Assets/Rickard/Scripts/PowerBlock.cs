@@ -126,6 +126,13 @@ public class PowerBlock : MonoBehaviour
         else
             return false;
     }
+    public bool CheckDecoy()
+    {
+        if (gate[2] && powerdGate[3])
+            return true;
+        else
+            return false;
+    }
 
     public void CheckUp(PowerBlock pBlock)
     {

@@ -10,8 +10,15 @@ public class FuseGameManager : MonoBehaviour
     GameObject fuseBlockTwo;
     [SerializeField]
     GameObject fuseBlockThree;
+    [SerializeField]
+    FuseLights lightDecoy;
+    [SerializeField]
+    FuseLights lightFinish;
+
+    PuzzleTrigger puzzleTrigger;
 
     bool finish = false;
+    bool decoy = false;
 
     int[,] spawnDecider = new int[4, 4]
     {
@@ -26,6 +33,7 @@ public class FuseGameManager : MonoBehaviour
 
     void Start()
     {
+        puzzleTrigger = GetComponent<PuzzleTrigger>();
         for (int y = 0;  y < spawnDecider.GetLength(0);  y++)
         {
             for (int x = 0; x < spawnDecider.GetLength(1); x++)
@@ -84,6 +92,9 @@ public class FuseGameManager : MonoBehaviour
         BlockLoop();
         if (finish)
             FinnishLoop();
+        DecoyLight(decoy);
+        FinishLight(finish);
+
         ColorLoop();
     }
 
@@ -133,6 +144,9 @@ public class FuseGameManager : MonoBehaviour
                 if (y == 0 && x == powerBlocks.GetLength(1) - 1)
                     finish = powerBlocks[y, x].CheckFinish();
 
+                if (y == powerBlocks.GetLength(0) - 1 && x == 2)
+                    decoy = powerBlocks[y, x].CheckDecoy();
+
             }
         }
 
@@ -162,7 +176,7 @@ public class FuseGameManager : MonoBehaviour
             }
         }
 
-
+        puzzleTrigger.TriggerEvent();
     }
 
     private void ColorLoop()
@@ -177,5 +191,19 @@ public class FuseGameManager : MonoBehaviour
         }
 
 
+    }
+    private void DecoyLight(bool value)
+    {
+        if (value)
+            lightDecoy.LightUp();
+        if (!value)
+            lightDecoy.NoLight();
+    }
+    private void FinishLight(bool value)
+    {
+        if (value)
+            lightFinish.LightUp();
+        if (!value)
+            lightFinish.NoLight();
     }
 }
