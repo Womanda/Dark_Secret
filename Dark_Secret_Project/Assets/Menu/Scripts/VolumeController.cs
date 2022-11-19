@@ -1,15 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class VolumeController : MonoBehaviour
 {
     [Header("Volume setting")]
-    [SerializeField] private Text volumeTextValue = null;
+    [SerializeField] private TMP_Text volumeTextValue = null;
     [SerializeField] private Slider volumeSlider = null;
-    [SerializeField] private float defaultVolume = 0.5f;
+    [SerializeField] private float defaultVolume = 1.0f;
 
     [Header("Confirmation")]
     [SerializeField] private GameObject confirmationPrompt = null;
