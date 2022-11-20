@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Menu/Scenes/Main Menu.unity
     guid: 7eaa2f60bbec3f44e84b8a900d7b92e6
   - enabled: 1
-    path: Assets/Menu/Scenes/Start menu.unity
+    path: Assets/Menu/Scenes/Phone Menu.unity
     guid: 306d5b690681abc4692d4e80eac51b5a
   - enabled: 1
     path: Assets/Menu/Scenes/End Menu.unity
