@@ -88,15 +88,16 @@ namespace BNG {
         XRInteractorLineVisual vis;
 
         public virtual void SetupXRITRaycaster() {
+            // Check if user has already added any components
             xrRay = gameObject.GetComponent<XRRayInteractor>();
+            vis = gameObject.GetComponent<XRInteractorLineVisual>();
+
             if(xrRay == null) {
 
+                xrRay = gameObject.AddComponent<XRRayInteractor>();
                 ActionBasedController abc = gameObject.AddComponent<ActionBasedController>();
 
-
-                xrRay = gameObject.AddComponent<XRRayInteractor>();
-               
-
+                // Setup default ui input action
                 if (VRUISystem.Instance.UIInputAction != null) {
                     abc.uiPressAction = new UnityEngine.InputSystem.InputActionProperty(VRUISystem.Instance.UIInputAction);
 
@@ -110,13 +111,17 @@ namespace BNG {
                     lr.useWorldSpace = true;
                     curColor = lr.colorGradient;
                 }
+            }
 
+            if(vis == null) {
                 // Setup XRay Visual
                 vis = gameObject.AddComponent<XRInteractorLineVisual>();
+                vis.lineWidth = 0.01f;
+
+                // Setup the color
                 if(curColor != null) {
                     vis.validColorGradient = curColor;
                     vis.invalidColorGradient = curColor;
-                    vis.lineWidth = 0.01f;
                 }
             }
         }
