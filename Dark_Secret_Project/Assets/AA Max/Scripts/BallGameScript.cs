@@ -39,74 +39,86 @@ public class BallGameScript : MonoBehaviour
 
     public void moveBallRight()
     {
-        if(currentNumber == 9)
+        if (!ballMove)
         {
-            currentNumber += 3;
-            UpdateBallPos();
-        }
-        else if (currentNumber == 10 || currentNumber == 13)
-        {
-            currentNumber += 2;
-            UpdateBallPos();
-        }
-        else if (currentNumber == 1 || currentNumber == 3)
-        {
-            currentNumber += 1;
-            UpdateBallPos();
+            if (currentNumber == 9)
+            {
+                currentNumber += 3;
+                UpdateBallPos();
+            }
+            else if (currentNumber == 10 || currentNumber == 13)
+            {
+                currentNumber += 2;
+                UpdateBallPos();
+            }
+            else if (currentNumber == 1 || currentNumber == 3)
+            {
+                currentNumber += 1;
+                UpdateBallPos();
+            }
         }
     }
     public void moveBallDown()
     {
-        if (currentNumber == 15)
+        if (!ballMove)
         {
-            currentNumber -= 12;
-            UpdateBallPos();
-        }
-        else if (currentNumber == 13 || currentNumber == 10)
-        {
-            currentNumber -= 8;
-            UpdateBallPos();
-        }
-        else if (currentNumber ==  9)
-        {
-            currentNumber -= 4;
-            UpdateBallPos();
+            if (currentNumber == 15)
+            {
+                currentNumber -= 12;
+                UpdateBallPos();
+            }
+            else if (currentNumber == 13 || currentNumber == 10)
+            {
+                currentNumber -= 8;
+                UpdateBallPos();
+            }
+            else if (currentNumber == 9)
+            {
+                currentNumber -= 4;
+                UpdateBallPos();
+            }
         }
     }
     public void moveBallLeft()
     {
-        if (currentNumber == 12)
+        if (!ballMove)
         {
-            currentNumber -= 3;
-            UpdateBallPos();
-        }
-        else if (currentNumber == 15)
-        {
-            currentNumber -= 2;
-            UpdateBallPos();
-        }
-        else if (currentNumber == 4 || currentNumber == 2 || currentNumber == 10)
-        {
-            currentNumber -= 1;
-            UpdateBallPos();
+            if (currentNumber == 12)
+            {
+                currentNumber -= 3;
+                UpdateBallPos();
+            }
+            else if (currentNumber == 15)
+            {
+                currentNumber -= 2;
+                UpdateBallPos();
+            }
+            else if (currentNumber == 4 || currentNumber == 2 || currentNumber == 10)
+            {
+                currentNumber -= 1;
+                UpdateBallPos();
+            }
         }
     }
     public void moveBallUp()
     {
-        if (currentNumber == 3)
+        if (!ballMove)
         {
-            currentNumber += 12;
-            UpdateBallPos();
-        }
-        else if (currentNumber == 2 || currentNumber == 5)
-        {
-            currentNumber += 8;
-            UpdateBallPos();
-        }
-        else if (currentNumber == 9 || currentNumber == 4)
-        {
-            currentNumber += 4;
-            UpdateBallPos();
+            if (currentNumber == 3)
+            {
+                currentNumber += 12;
+                UpdateBallPos();
+            }
+            else if (currentNumber == 2 || currentNumber == 5)
+            {
+                currentNumber += 8;
+                UpdateBallPos();
+            }
+            else if (currentNumber == 9 || currentNumber == 4)
+            {
+                currentNumber += 4;
+                UpdateBallPos();
+            }
         }
     }
 
