@@ -8,17 +8,33 @@ public class BallGameScript : MonoBehaviour
     public GameObject Ball;
     //nummer bollen står på
     private int currentNumber;
-    //lägg till nummer
-    private int AddNumber;
     //Antal slots (dont touch!)
     public GameObject[] Slots;
-
+    //speed på boll
+    public float ballSpeed = 1;
+    //nollpunkt
+    //public Vector3 Noll = new Vector3(0,0,0);
+    private bool ballMove;
     void Start()
     {
         currentNumber = 1;
 
+
         //Så att bollen startar på rätt plats
         UpdateBallPos();
+    }
+    //Positionen på parenten till bollen är nollpunkten 
+    private void Update()
+    {
+        //flyttar bollen till active slot
+        if(ballMove)
+        {
+            Ball.transform.localPosition = Vector3.MoveTowards(Ball.transform.localPosition, Slots[currentNumber].transform.localPosition, ballSpeed * Time.deltaTime);
+        }
+        if (Ball.transform.localPosition == Slots[currentNumber].transform.localPosition)
+        {
+            ballMove = false;
+        }
     }
 
     public void moveBallRight()
@@ -38,7 +54,6 @@ public class BallGameScript : MonoBehaviour
             currentNumber += 1;
             UpdateBallPos();
         }
-
     }
     public void moveBallDown()
     {
@@ -95,11 +110,9 @@ public class BallGameScript : MonoBehaviour
         }
     }
 
-    //parentar bollen till nummer och uppdaterar sedan bollens position till rätt ställen
+    //enablar move
     void UpdateBallPos()
     {
-        Ball.transform.SetParent(Slots[currentNumber].transform);
-        Ball.transform.localPosition = new Vector3(0, 0, 0);
+        ballMove = true;
     }
-
 }
