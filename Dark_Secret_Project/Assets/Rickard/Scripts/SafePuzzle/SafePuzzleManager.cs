@@ -18,9 +18,13 @@ public class SafePuzzleManager : MonoBehaviour
 
     [SerializeField]
     int codeIndex = 0;
+
+    
+
+    PuzzleTrigger puzzleTrigger;
     void Start()
     {
-        
+        puzzleTrigger = GetComponent<PuzzleTrigger>();
     }
 
     public void UpdateNumber(float value)
@@ -37,14 +41,22 @@ public class SafePuzzleManager : MonoBehaviour
         if (currentNumber == code[codeIndex] && CheckClockwise(codeIndex))
         {
 
+            if (codeIndex == code.Length - 1)
+                finishPuzzle();
             if (codeIndex < code.Length - 1)
                 codeIndex++;
+            
 
         }
         else if (currentNumber == code[codeIndex] || Overstep(codeIndex))
         {
             codeIndex = 0;
         }
+    }
+
+    void finishPuzzle()
+    {
+        puzzleTrigger.TriggerEvent();
     }
 
     public bool AlternatingClockwise(int index)
