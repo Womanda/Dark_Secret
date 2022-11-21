@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(" ");
+        SceneManager.LoadScene("Phone menu");
     }
 
     public void QuitGame()
