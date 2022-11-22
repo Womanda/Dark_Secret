@@ -6,10 +6,15 @@ public class PadPuzzle : MonoBehaviour
 {
     //generell int för att följa puzzle framsteg
     public int padPuzzleProgress;
-    //boll startar countdown
+    //bool startar countdown
+    private bool clockActive;
+    //gömm clockan först och sätt sedan på den vid första rätta intryck
+    public GameObject clock;
 
     void Start()
     {
+        clock.SetActive(false);
+        clockActive = false;
         padPuzzleProgress = 0;
     }
 
@@ -21,8 +26,12 @@ public class PadPuzzle : MonoBehaviour
 
     public void puzzleProgress()
     {
+        if (!clockActive)
+        {
+            clockActive = true;
+            clock.SetActive(true);
+        }
         padPuzzleProgress++;
-        gameObject.SetActive(false);
     }
 
     public void puzzleReset()
