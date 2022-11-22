@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class BallGameScript : MonoBehaviour
 {
@@ -15,10 +16,13 @@ public class BallGameScript : MonoBehaviour
     //nollpunkt
     //public Vector3 Noll = new Vector3(0,0,0);
     private bool ballMove;
+    //pusslet av eller på
+    private bool puzzleActive;
+    public Animator anim;
     void Start()
     {
+        puzzleActive = true;
         currentNumber = 1;
-
 
         //Så att bollen startar på rätt plats
         UpdateBallPos();
@@ -39,7 +43,7 @@ public class BallGameScript : MonoBehaviour
 
     public void moveBallRight()
     {
-        if (!ballMove)
+        if (!ballMove && puzzleActive)
         {
             if (currentNumber == 9)
             {
@@ -56,11 +60,16 @@ public class BallGameScript : MonoBehaviour
                 currentNumber += 1;
                 UpdateBallPos();
             }
+            else
+            {
+                anim.Play("BallWobbleRight");
+            }
+            
         }
     }
     public void moveBallDown()
     {
-        if (!ballMove)
+        if (!ballMove && puzzleActive)
         {
             if (currentNumber == 15)
             {
@@ -77,11 +86,15 @@ public class BallGameScript : MonoBehaviour
                 currentNumber -= 4;
                 UpdateBallPos();
             }
+            else
+            {
+                anim.Play("BallWobbleDown");
+            }
         }
     }
     public void moveBallLeft()
     {
-        if (!ballMove)
+        if (!ballMove && puzzleActive)
         {
             if (currentNumber == 12)
             {
@@ -98,11 +111,15 @@ public class BallGameScript : MonoBehaviour
                 currentNumber -= 1;
                 UpdateBallPos();
             }
+            else
+            {
+                anim.Play("BallWobbleLeft");
+            }
         }
     }
     public void moveBallUp()
     {
-        if (!ballMove)
+        if (!ballMove && puzzleActive)
         {
             if (currentNumber == 3)
             {
@@ -114,10 +131,21 @@ public class BallGameScript : MonoBehaviour
                 currentNumber += 8;
                 UpdateBallPos();
             }
-            else if (currentNumber == 9 || currentNumber == 4)
+            else if (currentNumber == 9)
             {
                 currentNumber += 4;
                 UpdateBallPos();
+            }
+            else if (currentNumber == 4)
+            {
+                currentNumber += 4;
+                UpdateBallPos();
+                Debug.Log("You Win");
+                puzzleActive = false;
+            }
+            else
+            {
+                anim.Play("BallWobbleUp");
             }
         }
     }
