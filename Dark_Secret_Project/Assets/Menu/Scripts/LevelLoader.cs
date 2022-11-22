@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BNG;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
     public float transitionTime = 2f;
+    public ScreenFader screenFader;
     
     public GameObject Door;
     public GameObject Title;
@@ -39,12 +41,21 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevel());
     }
-    IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevel()
     {
         yield return new WaitForSeconds(transitionTime);
 
-        SceneManager.LoadScene(levelIndex);
+        StartCoroutine(LoadScene());
+
+        screenFader.DoFadeIn();
+    }
+
+
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(0.6f);
+        SceneManager.LoadScene(1);
     }
 }
