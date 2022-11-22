@@ -1,16 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
-    public void StartGame()
-    {
-        SceneManager.LoadScene("Phone menu");
-    }
-
     public void QuitGame()
     {
         Application.Quit();
@@ -18,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(" ");
+        SceneManager.LoadScene("Main menu");
     }
 
     public void NextScene()
