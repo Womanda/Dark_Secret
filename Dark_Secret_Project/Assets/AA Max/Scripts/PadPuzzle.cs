@@ -12,35 +12,54 @@ public class PadPuzzle : MonoBehaviour
     //gömm clockan först och sätt sedan på den vid första rätta intryck
     public GameObject clock;
 
+    //grab button script
+
+    public buttondissabler[] BtnDsl;
 
     //Timer grejer
     public int Duration { get; private set; }
     private int remainingDuration;
     //Grab Clock 
     public Text text;
+    //pussel start bool
+    public bool puzzleActive;
 
     void Start()
     {
+        puzzleActive = false;
         clock.SetActive(false);
         clockActive = false;
         padPuzzleProgress = 0;
     }
 
-    public void puzzleProgress()
+    public void initiatePuzzle()
     {
-        if (!clockActive)
+        if (!puzzleActive && !clockActive)
         {
+            puzzleActive = true;
             clockActive = true;
             clock.SetActive(true);
-            SetDuration(8);
+            SetDuration(70);
             Begin();
+            padPuzzleProgress++;
         }
-        padPuzzleProgress++;
+    }
+
+    public void puzzleProgress()
+    {
+        if (clockActive && puzzleActive)
+        {
+            padPuzzleProgress++;
+        }
     }
 
     public void puzzleReset()
     {
         padPuzzleProgress = 0;
+        for (int i = 0; i < BtnDsl.Length; i++)
+        {
+            BtnDsl[i].Resetfunctionality();
+        }
     }
 
     public PadPuzzle SetDuration(int seconds)
@@ -79,13 +98,18 @@ public class PadPuzzle : MonoBehaviour
         Debug.Log("Timer ran out");
         text.text = "00:00";
         Duration = remainingDuration = 0;
+        clockActive = false;
     }
 
     //om du löser puzzlet innan tiden tagit slut
     public void winConditionMet()
     {
-        Debug.Log("you won the padgame!");
-        StopAllCoroutines();
+        if (puzzleActive)
+        {
+            Debug.Log("you won the padgame!");
+            puzzleActive = false;
+            StopAllCoroutines();
+        }
     }
 
 }

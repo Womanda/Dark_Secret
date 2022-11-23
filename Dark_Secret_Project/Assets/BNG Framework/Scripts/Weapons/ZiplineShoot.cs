@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using BNG;
 
 namespace BNG {
 
@@ -9,6 +10,8 @@ namespace BNG {
     /// An example weapon script that can fire Raycasts or Projectile objects
     /// </summary>
     public class ZiplineShoot : GrabbableEvents {
+
+        public JointHelper jntHlp;
 
         [Header("General : ")]
         /// <summary>
@@ -36,7 +39,7 @@ namespace BNG {
         /// Ex : 0.2 = 5 Shots per second
         /// </summary>
         [Tooltip("Ex : 0.2 = 5 Shots per second")]
-        public float FiringRate = 0.2f;
+        public float FiringRate = 2.4f;
         float lastShotTime;
 
         [Tooltip("Amount of force to apply to a Rigidbody once damaged")]
@@ -168,6 +171,8 @@ namespace BNG {
 
             // We just fired this bullet, but now its a grapple lmao
             BulletInChamber = true;
+            
+            //jntHlp.LockXRotation = true;
 
             // Try to load a new bullet into chamber         
             if (AutoChamberRounds) {
