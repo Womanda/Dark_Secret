@@ -24930,7 +24930,7 @@ GameObject:
   - component: {fileID: 8624403585595614534}
   - component: {fileID: 344477045679739780}
   m_Layer: 0
-  m_Name: XR Rig Advanced (New)
+  m_Name: XR Rig Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
