@@ -32,6 +32,7 @@ public class PadPuzzle : MonoBehaviour
         padPuzzleProgress = 0;
     }
 
+    //första knappen agerar som startare och eller plus 1 total score
     public void initiatePuzzle()
     {
         if (!puzzleActive && !clockActive)
@@ -41,6 +42,10 @@ public class PadPuzzle : MonoBehaviour
             clock.SetActive(true);
             SetDuration(70);
             Begin();
+            padPuzzleProgress++;
+        }
+        if (clockActive)
+        {
             padPuzzleProgress++;
         }
     }
@@ -104,7 +109,7 @@ public class PadPuzzle : MonoBehaviour
     //om du löser puzzlet innan tiden tagit slut
     public void winConditionMet()
     {
-        if (puzzleActive)
+        if (puzzleActive && padPuzzleProgress == 11)
         {
             Debug.Log("you won the padgame!");
             puzzleActive = false;
