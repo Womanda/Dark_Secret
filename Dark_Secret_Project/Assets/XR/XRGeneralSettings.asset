@@ -31,7 +31,10 @@ MonoBehaviour:
   m_AutomaticRunning: 0
   m_Loaders:
   - {fileID: 11400000, guid: 8859b994b37f8d54db4c77d809d26dcc, type: 2}
+<<<<<<< HEAD
+=======
   - {fileID: 11400000, guid: 143c3db8a783f4948916d08b43fb2fa7, type: 2}
+>>>>>>> Develop
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
