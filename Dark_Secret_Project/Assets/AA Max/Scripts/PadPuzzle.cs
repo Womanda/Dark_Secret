@@ -8,7 +8,7 @@ public class PadPuzzle : MonoBehaviour
     //generell int för att följa puzzle framsteg
     public int padPuzzleProgress;
     //bool startar countdown
-    private bool clockActive;
+    public bool clockActive;
     //gömm clockan först och sätt sedan på den vid första rätta intryck
     public GameObject clock;
 
@@ -16,14 +16,15 @@ public class PadPuzzle : MonoBehaviour
 
     public buttondissabler[] BtnDsl;
 
-    //Timer grejer
+    //-----------Timer grejer----------------
     public int Duration { get; private set; }
     private int remainingDuration;
-    //Grab Clock 
+    //UI för klockan 
     public Text text;
     //pussel start bool
     public bool puzzleActive;
 
+    //stänger av allt vid start
     void Start()
     {
         puzzleActive = false;
@@ -32,7 +33,7 @@ public class PadPuzzle : MonoBehaviour
         padPuzzleProgress = 0;
     }
 
-    //första knappen agerar som startare och eller plus 1 total score
+    //första knappen agerar som startare och eller som bara plus 1 progress
     public void initiatePuzzle()
     {
         if (!puzzleActive && !clockActive)
@@ -40,7 +41,7 @@ public class PadPuzzle : MonoBehaviour
             puzzleActive = true;
             clockActive = true;
             clock.SetActive(true);
-            SetDuration(70);
+            SetDuration(360);
             Begin();
             padPuzzleProgress++;
         }
@@ -60,10 +61,22 @@ public class PadPuzzle : MonoBehaviour
 
     public void puzzleReset()
     {
-        padPuzzleProgress = 0;
-        for (int i = 0; i < BtnDsl.Length; i++)
+        if (puzzleActive && clockActive)
         {
-            BtnDsl[i].Resetfunctionality();
+            remainingDuration -= 30;
+            if (remainingDuration > 29)
+            {
+                UpdateUI(remainingDuration);
+            }
+            else
+            {
+                UpdateUI(0);
+            }
+            padPuzzleProgress = 0;
+            for (int i = 0; i < BtnDsl.Length; i++)
+            {
+                BtnDsl[i].Resetfunctionality();
+            }
         }
     }
 
