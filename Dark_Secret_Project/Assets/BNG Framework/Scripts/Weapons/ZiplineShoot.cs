@@ -172,7 +172,7 @@ namespace BNG {
             // We just fired this bullet, but now its a grapple lmao
             BulletInChamber = true;
             
-            //jntHlp.LockXRotation = true;
+            jntHlp.LockXRotation = true;
 
             // Try to load a new bullet into chamber         
             if (AutoChamberRounds) {

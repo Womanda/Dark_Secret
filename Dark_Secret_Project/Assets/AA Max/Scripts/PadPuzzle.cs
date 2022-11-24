@@ -45,7 +45,7 @@ public class PadPuzzle : MonoBehaviour
             Begin();
             padPuzzleProgress++;
         }
-        if (clockActive)
+        else
         {
             padPuzzleProgress++;
         }
