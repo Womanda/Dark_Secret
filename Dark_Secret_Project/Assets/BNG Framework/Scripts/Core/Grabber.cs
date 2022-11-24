@@ -372,8 +372,12 @@ namespace BNG {
             HoldType closestHoldType = getHoldType(grabObject);
             GrabButton closestGrabButton = GetGrabButton(grabObject);
 
+           // Forced grab through script or editor
+            if(ForceGrab) {
+                return true;
+            }
             // Hold to grab controls
-            if (closestHoldType == HoldType.HoldDown) {
+            else if (closestHoldType == HoldType.HoldDown) {
                 bool grabInput = getGrabInput(closestGrabButton) >= GripAmount;
 
                 if (!grabInput && GrabAction != null) {
