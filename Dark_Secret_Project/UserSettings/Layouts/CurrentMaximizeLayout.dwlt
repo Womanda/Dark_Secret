@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 34700
+  controlID: 35458
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9a84f7ff
-      m_LastClickedID: -555878
-      m_ExpandedIDs: 465cf7ff305ef7ff4c5ef7ff685ef7ff725ef7ff785ef7ff7e5ef7ff9c5ef7ffb25ef7ffca5ef7ffce5ef7ffb46df7ffb86df7ffbc6df7ffc06df7ffdc6df7ffe06df7ffe46df7ffe86df7ff0a6ef7ff0e6ef7ff126ef7ff166ef7ff1a6ef7ff366ef7ff3a6ef7ff3e6ef7ff426ef7ff666ef7ff6a6ef7ff6e6ef7ff726ef7ff7e6ef7ff826ef7ff966ef7ff9a6ef7ffaa6ef7ffb06ef7ffb46ef7ff7883f7ff7c83f7ff8083f7ff9483f7ff9883f7ff9c83f7ffb683f7ffba83f7ffbe83f7ffc283f7ffd683f7ffda83f7ffde83f7fffa83f7fffe83f7ff0284f7ff0e84f7ff1284f7ff2684f7ff2a84f7ff3284f7ff3884f7ff3c84f7ff6e84f7ff7884f7ff7c84f7ff9a84f7ffa484f7ff4887f7ff4c87f7ff8487f7ffd687f7ffda87f7fff687f7ff1288f7ff1a88f7ff1e88f7ff5a88f7ff6888f7ff6c88f7ff7a88f7ff9c88f7ffa088f7ffc488f7ffce88f7fff488f7ff0089f7ff0a89f7ff9a34f8ff0a47f8ff4872f8ffd672f8ffde72f8ffe272f8ff3073f8ff6873f8ffce73f8ff987df8ffee7df8ff267ef8ff2e7ef8ff327ef8ff807ef8ffb87ef8ff4420f9ff9240f9ffd06bf9ff286cf9ff606cf9ff686cf9ff6c6cf9ffba6cf9fff26cf9ff586df9ffe874f9ff2075f9ff2875f9ff2c75f9ff7a75f9ffb275f9ff3e17faffb424fafff04ffafff44ffaff8250faff8650faff8e50faff9250faffe050faff1851faff7e51faff16fcfaff2a9effff86b2ffffe4cbffffe8cbffff3cccffff40ccffff78ccffff7cccffff84ccffff88ccffffe0ccffffe4ccffff3ad2ffff2cfbffff5472000072720000728e0200009b0200f8ae02005cfb02007afb0200362b0300ae410300a65503008c5703009257030094570300b05703008ee3030036e4030078ed030006fa0300fe0d0400e40f0400ea0f0400ec0f04000a1004008e4804002e4a0400bc560400b46a0400886c0400a06c0400a26c0400c06c0400
+      m_SelectedIDs: bc820200
+      m_LastClickedID: 0
+      m_ExpandedIDs: a055f5ff465cf7ff305ef7ff4c5ef7ff685ef7ff725ef7ff785ef7ff7e5ef7ff9c5ef7ffb25ef7ffca5ef7ffce5ef7ffb46df7ffb86df7ffbc6df7ffc06df7ffdc6df7ffe06df7ffe46df7ffe86df7ff0a6ef7ff0e6ef7ff126ef7ff166ef7ff1a6ef7ff366ef7ff3a6ef7ff3e6ef7ff426ef7ff666ef7ff6a6ef7ff6e6ef7ff726ef7ff7e6ef7ff826ef7ff966ef7ff9a6ef7ffaa6ef7ffb06ef7ffb46ef7ff7883f7ff7c83f7ff8083f7ff9483f7ff9883f7ff9c83f7ffb683f7ffba83f7ffbe83f7ffc283f7ffd683f7ffda83f7ffde83f7fffa83f7fffe83f7ff0284f7ff0e84f7ff1284f7ff2684f7ff2a84f7ff3284f7ff3884f7ff3c84f7ff6e84f7ff7884f7ff7c84f7ff9a84f7ff4887f7ff4c87f7ff8487f7ffd687f7ffda87f7fff687f7ff1288f7ff1a88f7ff1e88f7ff5a88f7ff6888f7ff6c88f7ff7a88f7ff9c88f7ffa088f7ffc488f7ffce88f7fff488f7ff0089f7ff0a89f7ff9a34f8ff0a47f8ff4872f8ffd672f8ffde72f8ffe272f8ff3073f8ff6873f8ffce73f8ff987df8ffee7df8ff267ef8ff2e7ef8ff327ef8ff807ef8ffb87ef8ff4420f9ff9240f9ffd06bf9ff286cf9ff606cf9ff686cf9ff6c6cf9ffba6cf9fff26cf9ff586df9ffe874f9ff2075f9ff2875f9ff2c75f9ff7a75f9ffb275f9ff3e17faffb424fafff04ffafff44ffaff8250faff8650faff8e50faff9250faffe050faff1851faff7e51faff16fcfaff2a9effff86b2ffffe4cbffffe8cbffff3cccffff40ccffff78ccffff7cccffff84ccffff88ccffffe0ccffffe4ccffff3ad2ffff2cfbffff5472000072720000728e0200009b0200f8ae02005cfb02007afb0200362b0300ae410300a65503008c5703009257030094570300b05703008ee3030036e4030078ed030006fa0300fe0d0400e40f0400ea0f0400ec0f04000a1004008e4804002e4a0400bc560400b46a0400886c0400a06c0400a26c0400c06c0400
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -610,9 +610,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 190.84972, y: 30.715614, z: 241.79321}
+    m_Target: {x: -0.33112332, y: 0.24642986, z: 1.8496296}
     speed: 2
-    m_Value: {x: 190.84972, y: 30.715614, z: 241.79321}
+    m_Value: {x: -0.33112332, y: 0.24642986, z: 1.8496296}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -659,9 +659,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0861862, y: -0.85038143, z: 0.1453583, w: -0.49805158}
+    m_Target: {x: -0.31124175, y: 0.5910353, z: -0.26593173, w: -0.69488585}
     speed: 2
-    m_Value: {x: -0.086196505, y: -0.85048306, z: 0.14537567, w: -0.4981111}
+    m_Value: {x: -0.31127596, y: 0.5911003, z: -0.26596096, w: -0.69496226}
   m_Size:
     m_Target: 0.055533845
     speed: 2
@@ -869,21 +869,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/AA Max/Scripts
+    - Assets/AA Max/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 65
   m_LastFolders:
-  - Assets/AA Max/Scripts
+  - Assets/AA Max/Scenes
   m_LastFoldersGridSize: 65
   m_LastProjectPath: C:\Users\Lander\Documents\GitHub\Dark_Secret\Dark_Secret_Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 40b00000
-    m_LastClickedID: 45120
+    m_SelectedIDs: 3eb00000
+    m_LastClickedID: 45118
     m_ExpandedIDs: 000000008aad00008cad000092ad000098ad000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -937,9 +937,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9a84f7ff
-    m_LastClickedInstanceID: -555878
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: bc820200
+    m_LastClickedInstanceID: 164540
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000ac6f0000607f0000f644000040640000924400009e1300006096ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
