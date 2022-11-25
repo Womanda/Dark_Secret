@@ -15,16 +15,28 @@ public class VolumeController : MonoBehaviour
     [Header("Confirmation")]
     [SerializeField] private GameObject confirmationPrompt = null;
 
+    private void Start()
+    {
+        LoadValues();
+    }
     public void SetVolume(float volume)
     {
-        AudioListener.volume = volume;
         volumeTextValue.text = volume.ToString("0.0");
     }
 
     public void VolumeApply() // Confirmar att volymkontrollen sparas i spelet
     {
-        PlayerPrefs.SetFloat("masterVolume", AudioListener.volume);
+        float volumeValue = volumeSlider.value;
+        PlayerPrefs.SetFloat("MasterVolume", AudioListener.volume);
         StartCoroutine(ConfirmationBox());
+        LoadValues();
+    }
+
+    void LoadValues()
+    {
+        float volumeValue = PlayerPrefs.GetFloat("MasterValue");
+        volumeSlider.value = volumeValue;
+        AudioListener.volume = volumeValue;
     }
 
     public IEnumerator ConfirmationBox()

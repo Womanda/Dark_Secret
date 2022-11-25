@@ -4654,7 +4654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e982f3e3a4c0958439eec5178c59c033, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTextValue: {fileID: 0}
+  volumeTextValue: {fileID: 5475621615807009103}
   volumeSlider: {fileID: 517137976638884029}
   defaultVolume: 1
   confirmationPrompt: {fileID: 517137975289629114}

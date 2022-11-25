@@ -11,6 +11,7 @@ public class LevelLoader : MonoBehaviour
     
     public GameObject Door;
     public GameObject Title;
+    public GameObject MenuScreen;
     private void ExecuteTrigger(string trigger)
     {
         if (Door != null)
@@ -32,12 +33,23 @@ public class LevelLoader : MonoBehaviour
                 animator.SetTrigger(trigger);
             }
         }
+
+        if (MenuScreen != null)
+        {
+            var animator = MenuScreen.GetComponent<Animator>();
+
+            if (animator != null)
+            {
+                animator.SetTrigger(trigger);
+            }
+        }
     }
 
     public void OnButtonClick()
     {
         ExecuteTrigger("TriggerOpen");
         ExecuteTrigger("TriggerTitle");
+        ExecuteTrigger("TriggerMenu");
     }
     public void LoadNextLevel()
     {
