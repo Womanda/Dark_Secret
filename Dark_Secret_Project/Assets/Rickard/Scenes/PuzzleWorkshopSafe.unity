@@ -130,10 +130,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1554282662615906780}
     m_Modifications:
+    - target: {fileID: 1556631550872366031, guid: b9e69d1912023544684366deb552da41,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23a701d6b601fa94f8f753705117c0c5, type: 2}
+    - target: {fileID: 3675033753070892824, guid: b9e69d1912023544684366deb552da41,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 23a701d6b601fa94f8f753705117c0c5, type: 2}
+    - target: {fileID: 4198884463629514883, guid: b9e69d1912023544684366deb552da41,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aa1258b8f2533244088c52458d393cbf, type: 2}
     - target: {fileID: 4883625346730221589, guid: b9e69d1912023544684366deb552da41,
         type: 3}
       propertyPath: SnapDegrees
-      value: 20
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4883625347181606832, guid: b9e69d1912023544684366deb552da41,
         type: 3}
@@ -213,27 +228,27 @@ PrefabInstance:
     - target: {fileID: 8974848985981064563, guid: b9e69d1912023544684366deb552da41,
         type: 3}
       propertyPath: code.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8974848985981064563, guid: b9e69d1912023544684366deb552da41,
         type: 3}
       propertyPath: code.Array.data[0]
-      value: 40
+      value: 144
       objectReference: {fileID: 0}
     - target: {fileID: 8974848985981064563, guid: b9e69d1912023544684366deb552da41,
         type: 3}
       propertyPath: code.Array.data[1]
-      value: 300
+      value: 252
       objectReference: {fileID: 0}
     - target: {fileID: 8974848985981064563, guid: b9e69d1912023544684366deb552da41,
         type: 3}
       propertyPath: code.Array.data[2]
-      value: 80
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 8974848985981064563, guid: b9e69d1912023544684366deb552da41,
         type: 3}
       propertyPath: code.Array.data[3]
-      value: 280
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 8974848985981064563, guid: b9e69d1912023544684366deb552da41,
         type: 3}
@@ -242,137 +257,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9e69d1912023544684366deb552da41, type: 3}
---- !u!1001 &586358995
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1554282662615906780}
-    m_Modifications:
-    - target: {fileID: 2122307198253450732, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_Name
-      value: PoweLightDestination
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0005
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0005
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.0004999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.00081
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00201
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.00141
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.49643415
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.48988545
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.50354064
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.5099139
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7580904213649856486, guid: 6257919e36388ec42bf71685eddaad1d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6257919e36388ec42bf71685eddaad1d, type: 3}
---- !u!1 &586358996 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2122307198253450732, guid: 6257919e36388ec42bf71685eddaad1d,
-    type: 3}
-  m_PrefabInstance: {fileID: 586358995}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &586358997 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8316336583760517491, guid: 6257919e36388ec42bf71685eddaad1d,
-    type: 3}
-  m_PrefabInstance: {fileID: 586358995}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586358996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 081cbd72f81651d4dbbac26d0554b3e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &586358998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586358996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f2bd53658259c24a83657bbae494f0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activationKey: 2
-  stepsToActivate: 1
-  activation:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 586358997}
-        m_TargetAssemblyTypeName: FuseLights, Assembly-CSharp
-        m_MethodName: LightUp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1039865253
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,13 +626,13 @@ MonoBehaviour:
       - m_Target: {fileID: 919132149065388904}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: Play
-        m_Mode: 3
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: open
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!95 &919132149065388904
@@ -844,5 +728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Safe
       objectReference: {fileID: 0}
+    - target: {fileID: 7170821774473836937, guid: 5826e3ce4d8cb0f4dae0ceff6fedd01c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 308b573d25326da409fa698e38ed0b0e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5826e3ce4d8cb0f4dae0ceff6fedd01c, type: 3}
