@@ -18897,6 +18897,7 @@ GameObject:
   - component: {fileID: 344477046303167003}
   - component: {fileID: 344477045234785925}
   - component: {fileID: 4414945452608833051}
+  - component: {fileID: 1693165053}
   m_Layer: 9
   m_Name: PlayerController
   m_TagString: Player
@@ -18953,6 +18954,7 @@ MonoBehaviour:
   MinElevation: -100
   MaxElevation: 5000
   LastPlayerMoveTime: 0
+  FdScrpt: {fileID: 0}
   SphereColliderRadius: 0.08
 --- !u!143 &1858655080203790662
 CharacterController:
@@ -19301,6 +19303,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1693165053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858655080201198734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488d459aa6c2eed40ae945d34fb10b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrnFader: {fileID: 4584237520312265845}
 --- !u!1 &1859601623543023116
 GameObject:
   m_ObjectHideFlags: 0
@@ -87993,6 +88008,11 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 517137976798966140, guid: a30ab60eabbd1d447bb182007010fa0f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 859158310470647135, guid: a30ab60eabbd1d447bb182007010fa0f,
         type: 3}
       propertyPath: m_Name
@@ -88002,6 +88022,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376657646231387173, guid: a30ab60eabbd1d447bb182007010fa0f,
+        type: 3}
+      propertyPath: hints.Array.data[0].hintText
+      value: Fuck off
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376657646231387173, guid: a30ab60eabbd1d447bb182007010fa0f,
+        type: 3}
+      propertyPath: hints.Array.data[1].hintText
+      value: I did a lot of work for this shit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376657646231387173, guid: a30ab60eabbd1d447bb182007010fa0f,
+        type: 3}
+      propertyPath: hints.Array.data[2].hintText
+      value: I'm on the roof top
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376657646231387173, guid: a30ab60eabbd1d447bb182007010fa0f,
+        type: 3}
+      propertyPath: hints.Array.data[3].hintText
+      value: I need to get to the other
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376657646231387173, guid: a30ab60eabbd1d447bb182007010fa0f,
+        type: 3}
+      propertyPath: hints.Array.data[4].hintText
+      value: building and break in.
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 517137975903499601, guid: a30ab60eabbd1d447bb182007010fa0f, type: 3}
