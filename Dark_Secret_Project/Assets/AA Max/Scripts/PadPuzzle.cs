@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.UI;
 
 public class PadPuzzle : MonoBehaviour
@@ -27,6 +28,9 @@ public class PadPuzzle : MonoBehaviour
     //Sound grejer
     public AudioSource success;
     public AudioSource failure;
+
+    //animation grejer
+    public Animator deskDoor;
 
     //stänger av allt vid start
     void Start()
@@ -133,6 +137,7 @@ public class PadPuzzle : MonoBehaviour
         {
             Debug.Log("you won the padgame!");
             success.Play();
+            deskDoor.Play("OpenDoorDesk");
             puzzleActive = false;
             StopAllCoroutines();
         }
