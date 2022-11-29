@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: d2923a62293338c4982fc2f37c805b1c,
+  m_LightingDataAsset: {fileID: 112000000, guid: 9e345d9adc362af4f9501b2c9e992e6e,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 3c37988f04b7ca24b9a99715a09a5fc3,
     type: 2}
@@ -402,7 +402,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 15
+  m_Range: 20
   m_SpotAngle: 60
   m_InnerSpotAngle: 6
   m_CookieSize: 10
@@ -459,7 +459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268890582}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5.49, z: 0}
+  m_LocalPosition: {x: 0, y: 2.156, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2097,6 +2097,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 400356911129080212, guid: 6e9d972a00214a74cb25091905b7f270,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4449110899332685085, guid: 6e9d972a00214a74cb25091905b7f270,
         type: 3}
       propertyPath: m_RootOrder
@@ -2125,17 +2130,17 @@ PrefabInstance:
     - target: {fileID: 4449110899332685085, guid: 6e9d972a00214a74cb25091905b7f270,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4449110899332685085, guid: 6e9d972a00214a74cb25091905b7f270,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4449110899332685085, guid: 6e9d972a00214a74cb25091905b7f270,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4449110899332685085, guid: 6e9d972a00214a74cb25091905b7f270,
         type: 3}
@@ -2156,6 +2161,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: XR Rig MENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525641668224608418, guid: 6e9d972a00214a74cb25091905b7f270,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7803766624135181254, guid: 6e9d972a00214a74cb25091905b7f270,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e9d972a00214a74cb25091905b7f270, type: 3}
