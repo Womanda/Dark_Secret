@@ -81,8 +81,8 @@ public class FuseGameManager : MonoBehaviour
 
     public void UpdateBox()
     {
-        Debug.Log("Updating Box Grid");
         resetLoop();
+        BlockLoop();
         BlockLoop();
         BlockLoop();
         BlockLoop();
