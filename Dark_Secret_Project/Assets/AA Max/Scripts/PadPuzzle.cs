@@ -56,6 +56,7 @@ public class PadPuzzle : MonoBehaviour
         if (clockActive && puzzleActive)
         {
             padPuzzleProgress++;
+
         }
     }
 
@@ -129,5 +130,4 @@ public class PadPuzzle : MonoBehaviour
             StopAllCoroutines();
         }
     }
-
 }
