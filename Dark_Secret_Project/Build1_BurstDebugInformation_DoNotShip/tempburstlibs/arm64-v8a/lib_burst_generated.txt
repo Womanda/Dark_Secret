@@ -127,7 +127,7 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_INPUT_SYSTEM_PACKAGE
 --compilation-defines=DISABLE_BUILTIN_INPUT_SYSTEM_OCULUS
 --compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_VR
---compilation-defines=UNITY_XR_AVAILABLE
+--compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_XR
 --compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_PHYSICS
 --compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_PHYSICS2D
 --compilation-defines=UNITY_INPUT_SYSTEM_ENABLE_UI
