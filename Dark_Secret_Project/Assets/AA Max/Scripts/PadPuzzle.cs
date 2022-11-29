@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.UI;
 
 public class PadPuzzle : MonoBehaviour
@@ -23,6 +24,13 @@ public class PadPuzzle : MonoBehaviour
     public Text text;
     //pussel start bool
     public bool puzzleActive;
+
+    //Sound grejer
+    public AudioSource success;
+    public AudioSource failure;
+
+    //animation grejer
+    public Animator deskDoor;
 
     //stänger av allt vid start
     void Start()
@@ -118,6 +126,8 @@ public class PadPuzzle : MonoBehaviour
         text.text = "00:00";
         Duration = remainingDuration = 0;
         clockActive = false;
+        failure.Play();
+        
     }
 
     //om du löser puzzlet innan tiden tagit slut
@@ -126,6 +136,8 @@ public class PadPuzzle : MonoBehaviour
         if (puzzleActive && padPuzzleProgress == 11)
         {
             Debug.Log("you won the padgame!");
+            success.Play();
+            deskDoor.Play("OpenDoorDesk");
             puzzleActive = false;
             StopAllCoroutines();
         }

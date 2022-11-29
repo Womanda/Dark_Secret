@@ -430,9 +430,9 @@ struct WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_marshaled_com : 
 	float ___m_Seconds_0;
 };
 
-// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=36
 #pragma pack(push, tp, 1)
-struct __StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 
+struct __StaticArrayInitTypeSizeU3D36_tE3135E025C70F21BBD65107243EE57F8AA699792 
 {
 	union
 	{
@@ -442,7 +442,7 @@ struct __StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88__padding[64];
+		uint8_t __StaticArrayInitTypeSizeU3D36_tE3135E025C70F21BBD65107243EE57F8AA699792__padding[36];
 	};
 };
 #pragma pack(pop, tp)
@@ -454,8 +454,8 @@ struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49
 
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
-	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::B87CB2FA17E06A0EE3B97D1440687279D8BB83967155642D8D78CD9FD3676A9E
-	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___B87CB2FA17E06A0EE3B97D1440687279D8BB83967155642D8D78CD9FD3676A9E_0;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=36 <PrivateImplementationDetails>::A4CB0DB6613E9C02A264901B3D40EDA09885A7C46E843C50377D26A83630058E
+	__StaticArrayInitTypeSizeU3D36_tE3135E025C70F21BBD65107243EE57F8AA699792 ___A4CB0DB6613E9C02A264901B3D40EDA09885A7C46E843C50377D26A83630058E_0;
 };
 
 // System.Exception
