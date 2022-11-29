@@ -11,6 +11,8 @@ namespace BNG {
     /// </summary>
     public class ZiplineShoot : GrabbableEvents {
 
+        public SceneInfo Sceneinfo;
+
         public JointHelper jntHlp;
 
         [Header("General : ")]
@@ -124,6 +126,7 @@ namespace BNG {
 
         void Start() {
             weaponRigid = GetComponent<Rigidbody>();
+            Sceneinfo.previousScene = 1;
         }
 
         public override void OnTrigger(float triggerValue) {

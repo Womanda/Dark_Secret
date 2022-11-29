@@ -130,7 +130,7 @@ namespace BNG {
 
         private Vector3 _initialPosition;
 
-        public FadeScript FdScrpt;
+        public ScreenFader FdScrpt;
 
 
         void Start() {
@@ -215,7 +215,7 @@ namespace BNG {
             if (characterController != null && (characterController.transform.position.y < MinElevation + 11 || characterController.transform.position.y > MaxElevation))
             {
                 //fade to black here
-                FdScrpt.fadeFunc();
+                FdScrpt.DoFadeOut();
 
             }
             // Check Elevation based on Character Controller height
