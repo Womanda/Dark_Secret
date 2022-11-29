@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: a8e514255697d30449e48b7f0c48040a,
+  m_LightingDataAsset: {fileID: 112000000, guid: 54a996566c3e581438a8f2b711acb2a1,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: eb33b62d04e8d824fa4a44491cb084e8,
     type: 2}
@@ -289,6 +289,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1987317118707592734, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2019080789272064605, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2448678664417969613, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
         type: 3}
       propertyPath: m_Name
@@ -353,6 +363,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4788805738095720892, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf0b2c377ea0384ca1cfb12de3bea71, type: 3}
