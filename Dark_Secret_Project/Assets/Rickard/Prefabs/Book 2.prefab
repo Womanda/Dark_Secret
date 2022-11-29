@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2115875401098164408
+--- !u!1 &1229676028
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5049945366602403027}
-  - component: {fileID: 1105424313547014303}
-  - component: {fileID: 7214916030017557151}
-  - component: {fileID: 9032678150059337500}
-  - component: {fileID: 2127015375258774472}
-  - component: {fileID: 3350801098879971624}
-  - component: {fileID: 5092563003557748060}
-  - component: {fileID: 4596886201567617662}
+  - component: {fileID: 1229676029}
+  - component: {fileID: 1229676031}
+  - component: {fileID: 1229676030}
   m_Layer: 0
-  m_Name: Book 2
+  m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5049945366602403027
+--- !u!4 &1229676029
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115875401098164408}
-  m_LocalRotation: {x: -0.75734425, y: -0.65105003, z: -0.017335648, w: 0.04757168}
-  m_LocalPosition: {x: -0.213, y: -0.78322184, z: 0.447}
-  m_LocalScale: {x: 0.6177294, y: 0.3956748, z: 0.11945789}
+  m_GameObject: {fileID: 1229676028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.6177295, y: 0.39567488, z: 0.11945794}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 5049945366602403027}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1105424313547014303
+--- !u!33 &1229676031
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115875401098164408}
+  m_GameObject: {fileID: 1229676028}
   m_Mesh: {fileID: 3822247309040838107, guid: 67f9e1c5ebe55ff489fdaedf8b085a16, type: 3}
---- !u!23 &7214916030017557151
+--- !u!23 &1229676030
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115875401098164408}
+  m_GameObject: {fileID: 1229676028}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -88,6 +83,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2115875401098164408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5049945366602403027}
+  - component: {fileID: 9032678150059337500}
+  - component: {fileID: 2127015375258774472}
+  - component: {fileID: 3350801098879971624}
+  - component: {fileID: 5092563003557748060}
+  - component: {fileID: 4596886201567617662}
+  - component: {fileID: 669203687}
+  - component: {fileID: 669203688}
+  m_Layer: 0
+  m_Name: Book 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5049945366602403027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115875401098164408}
+  m_LocalRotation: {x: -0.7573462, y: -0.65104777, z: -0.017337365, w: 0.04757054}
+  m_LocalPosition: {x: -0.213, y: -0.78322184, z: 0.447}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1229676029}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -174.57, y: 2.0540009, z: -81.465}
 --- !u!54 &9032678150059337500
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -196,8 +230,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.47028604, y: 0.50271493, z: 0.24891444}
-  m_Center: {x: -0.00043062886, y: 0.00064192904, z: -0.07445905}
+  m_Size: {x: 0.2918095, y: 0.19850066, z: 0.032343447}
+  m_Center: {x: 0.0005760789, y: 0.0011725836, z: -0.010742996}
 --- !u!114 &4596886201567617662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,3 +251,29 @@ MonoBehaviour:
   VibrateFrequency: 0.3
   VibrateAmplitude: 0.1
   VibrateDuration: 0.1
+--- !u!114 &669203687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115875401098164408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8279a47ff75f46b7c852ece1888d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &669203688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115875401098164408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804203cdc71657347bc071dfeba41047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LocalPositionOffset: {x: 0.074, y: 0.254, z: -0.176}
+  LocalRotationOffset: {x: 90, y: 90, z: 0}
