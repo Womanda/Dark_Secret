@@ -73,7 +73,9 @@ public class PowerBlock : MonoBehaviour
         if (!gameIsFInished)
         {
             RotateBlock();
+            
             fuseGameManager.UpdateBox();
+
         }
     }
     public void RotateBlock()
@@ -141,9 +143,12 @@ public class PowerBlock : MonoBehaviour
         {
             powerdGate[0] = true;
             
+            
         }
         else if(powered)
             powerdGate[0] = false;
+
+        
     }
     public void CheckRight(PowerBlock pBlock)
     {
@@ -155,6 +160,8 @@ public class PowerBlock : MonoBehaviour
         }
         else if(powered)
             powerdGate[1] = false;
+
+        
     }
     public void CheckDown(PowerBlock pBlock)
     {
@@ -166,6 +173,8 @@ public class PowerBlock : MonoBehaviour
         }
         else if (powered)
             powerdGate[2] = false;
+
+        
     }
     public void CheckLeft(PowerBlock pBlock)
     {
@@ -177,6 +186,8 @@ public class PowerBlock : MonoBehaviour
         }
         else if (powered)
             powerdGate[3] = false;
+
+        
     }
 
     public void ResolvePoweredStatus()
@@ -247,5 +258,10 @@ public class PowerBlock : MonoBehaviour
     public void Finsish()
     {
         gameIsFInished = true;
+    }
+
+    public bool[] GetGates()
+    {
+        return gate;
     }
 }

@@ -17,6 +17,7 @@ public class FuseGameManager : MonoBehaviour
 
     PuzzleTrigger puzzleTrigger;
 
+
     bool finish = false;
     bool decoy = false;
 
@@ -55,11 +56,10 @@ public class FuseGameManager : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         powerBlocks[2, 0].OnPush();
     }
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+   
+   
+
+  
 
     private void MakeAChild(int index, int y, int x)
     {
@@ -98,27 +98,7 @@ public class FuseGameManager : MonoBehaviour
         ColorLoop();
     }
 
-    public void Snaking()
-    {
-        List<Vector2> path = new List<Vector2>();
-        path.Add(new Vector2(0, 2));
-
-        for (int i = 0; i < 4*4; i++)
-        {
-            for (int p = 0; p < 4; p++)
-            {
-                Vector2 currentLoc = path[i];
-                if(currentLoc.y != 0 && p == 0)
-                {
-                    powerBlocks[Mathf.RoundToInt(currentLoc.y), Mathf.RoundToInt(currentLoc.x)].SnakeCheck(powerBlocks[Mathf.RoundToInt(currentLoc.y) - 1, Mathf.RoundToInt(currentLoc.x)], 0);
-                }
-                if(currentLoc.x != powerBlocks.GetLength(1) && p==1)
-                {
-
-                }
-            }
-        }
-    }
+    
 
     private void BlockLoop()
     {
