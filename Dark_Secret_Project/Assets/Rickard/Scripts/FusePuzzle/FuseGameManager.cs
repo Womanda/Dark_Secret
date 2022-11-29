@@ -20,16 +20,15 @@ public class FuseGameManager : MonoBehaviour
     bool finish = false;
     bool decoy = false;
 
-    int[,] spawnDecider = new int[4, 4]
+    int[,] spawnDecider = new int[3, 3]
     {
-        {0,1,1,0 },
-        {2,0,0,2 },
-        {0,1,2,0 },
-        {0,2,0,1 }
+        {0,1,0 },
+        {2,0,0 },
+        {1,2,1 }
     };
 
     [SerializeField]
-    PowerBlock[,] powerBlocks = new PowerBlock[4, 4];
+    PowerBlock[,] powerBlocks = new PowerBlock[3, 3];
 
     void Start()
     {
@@ -48,9 +47,9 @@ public class FuseGameManager : MonoBehaviour
     IEnumerator InitBlocks()
     {
         yield return new WaitForSeconds(0.1f);
-        powerBlocks[3, 0].OnPush();
+        powerBlocks[2, 0].OnPush();
         yield return new WaitForSeconds(0.1f);
-        powerBlocks[3, 0].OnPush();
+        powerBlocks[2, 0].OnPush();
     }
     // Update is called once per frame
     void Update()
@@ -84,8 +83,6 @@ public class FuseGameManager : MonoBehaviour
     {
         Debug.Log("Updating Box Grid");
         resetLoop();
-        BlockLoop();
-        BlockLoop();
         BlockLoop();
         BlockLoop();
         BlockLoop();
