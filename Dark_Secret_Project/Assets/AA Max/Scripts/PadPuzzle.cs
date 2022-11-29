@@ -24,6 +24,10 @@ public class PadPuzzle : MonoBehaviour
     //pussel start bool
     public bool puzzleActive;
 
+    //Sound grejer
+    public AudioSource success;
+    public AudioSource failure;
+
     //stänger av allt vid start
     void Start()
     {
@@ -118,6 +122,8 @@ public class PadPuzzle : MonoBehaviour
         text.text = "00:00";
         Duration = remainingDuration = 0;
         clockActive = false;
+        failure.Play();
+        
     }
 
     //om du löser puzzlet innan tiden tagit slut
@@ -126,6 +132,7 @@ public class PadPuzzle : MonoBehaviour
         if (puzzleActive && padPuzzleProgress == 11)
         {
             Debug.Log("you won the padgame!");
+            success.Play();
             puzzleActive = false;
             StopAllCoroutines();
         }
