@@ -7,6 +7,8 @@ public class BallGameScript : MonoBehaviour
 {
     //Mr. Boll
     public GameObject Ball;
+    //Get drawers rigidbody to enable drawer functionality
+    public Rigidbody DrawerRB;
     //nummer bollen står på
     private int currentNumber;
     //Antal slots (dont touch!)
@@ -140,6 +142,7 @@ public class BallGameScript : MonoBehaviour
             {
                 currentNumber += 4;
                 UpdateBallPos();
+                DrawerRB.constraints = RigidbodyConstraints.None;
                 Debug.Log("You Win");
                 puzzleActive = false;
             }

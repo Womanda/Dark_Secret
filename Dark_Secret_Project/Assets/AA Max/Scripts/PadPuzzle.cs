@@ -14,7 +14,7 @@ public class PadPuzzle : MonoBehaviour
 
     //grab button script
 
-    public buttondissabler[] BtnDsl;
+    public ButtonDissabler[] BtnDsl;
 
     //-----------Timer grejer----------------
     public int Duration { get; private set; }

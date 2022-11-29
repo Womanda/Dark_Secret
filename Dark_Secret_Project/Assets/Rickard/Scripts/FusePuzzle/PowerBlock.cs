@@ -73,7 +73,9 @@ public class PowerBlock : MonoBehaviour
         if (!gameIsFInished)
         {
             RotateBlock();
+            
             fuseGameManager.UpdateBox();
+
         }
     }
     public void RotateBlock()
@@ -136,47 +138,56 @@ public class PowerBlock : MonoBehaviour
 
     public void CheckUp(PowerBlock pBlock)
     {
-        Debug.Log("Checking up");
+        
         if (pBlock.CheckGate(2) && gate[0] && pBlock.CheckPowered())
         {
             powerdGate[0] = true;
-            Debug.Log("Checking up, Got POWER on Gate 0" + " X = " + gridLocalX + " Y = " + gridLocalY);
+            
+            
         }
         else if(powered)
             powerdGate[0] = false;
+
+        
     }
     public void CheckRight(PowerBlock pBlock)
     {
-        Debug.Log("Checking Right");
+        
         if (pBlock.CheckGate(3) && gate[1] && pBlock.CheckPowered())
         {
             powerdGate[1] = true;
-            Debug.Log("Checking Right, Got POWER on Gate 1" + " X = " + gridLocalX + " Y = " + gridLocalY);
+            
         }
         else if(powered)
             powerdGate[1] = false;
+
+        
     }
     public void CheckDown(PowerBlock pBlock)
     {
-        Debug.Log("Checking Down");
+        
         if (pBlock.CheckGate(0) && gate[2] && pBlock.CheckPowered())
         {
             powerdGate[2] = true;
-            Debug.Log("Checking Down, Got POWER on Gate 2" + " X = " + gridLocalX + " Y = " + gridLocalY);
+            
         }
         else if (powered)
             powerdGate[2] = false;
+
+        
     }
     public void CheckLeft(PowerBlock pBlock)
     {
-        Debug.Log("Checking Left");
+        
         if (pBlock.CheckGate(1) && gate[3] && pBlock.CheckPowered())
         {
             powerdGate[3] = true;
-            Debug.Log("Checking Left, Got POWER on Gate 3" + " X = " + gridLocalX + " Y = " + gridLocalY);
+            
         }
         else if (powered)
             powerdGate[3] = false;
+
+        
     }
 
     public void ResolvePoweredStatus()
@@ -247,5 +258,10 @@ public class PowerBlock : MonoBehaviour
     public void Finsish()
     {
         gameIsFInished = true;
+    }
+
+    public bool[] GetGates()
+    {
+        return gate;
     }
 }

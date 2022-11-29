@@ -8,6 +8,7 @@ TagManager:
   - HookSpot
   - Clipper
   - BallSlots
+  - Key
   layers:
   - Default
   - TransparentFX
