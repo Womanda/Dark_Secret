@@ -21,7 +21,7 @@ public class ButtonDissabler : MonoBehaviour
         if (padPzl.puzzleActive && padPzl.clockActive)
         {
             //knappen stannar nedtryckt när man klickar tills man resettar
-            rb.constraints = RigidbodyConstraints.FreezePositionY;
+            rb.constraints = RigidbodyConstraints.FreezePositionX;
         }
     }
 
