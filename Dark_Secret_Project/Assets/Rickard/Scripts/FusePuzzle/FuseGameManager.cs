@@ -50,6 +50,10 @@ public class FuseGameManager : MonoBehaviour
         powerBlocks[2, 0].OnPush();
         yield return new WaitForSeconds(0.1f);
         powerBlocks[2, 0].OnPush();
+        yield return new WaitForSeconds(0.1f);
+        powerBlocks[2, 0].OnPush();
+        yield return new WaitForSeconds(0.1f);
+        powerBlocks[2, 0].OnPush();
     }
     // Update is called once per frame
     void Update()
@@ -84,9 +88,8 @@ public class FuseGameManager : MonoBehaviour
         resetLoop();
         BlockLoop();
         BlockLoop();
-        BlockLoop();
-        BlockLoop();
-        BlockLoop();
+        //BlockLoop();
+       // BlockLoop();
         if (finish)
             FinnishLoop();
         DecoyLight(decoy);
@@ -134,6 +137,38 @@ public class FuseGameManager : MonoBehaviour
 
                 powerBlocks[y, x].ResolvePoweredStatus();
                 
+
+                if (y == 2 && x == 0)
+                    powerBlocks[y, x].CheckStart();
+
+                if (y == 0 && x == powerBlocks.GetLength(1) - 1)
+                    finish = powerBlocks[y, x].CheckFinish();
+
+                if (y == powerBlocks.GetLength(0) - 1 && x == 2)
+                    decoy = powerBlocks[y, x].CheckDecoy();
+
+            }
+        }
+        ReverseBlockLoop();
+
+    }
+    private void ReverseBlockLoop()
+    {
+        for (int y = powerBlocks.GetLength(0)-1; y >= 0; y--)
+        {
+            for (int x = powerBlocks.GetLength(1) -1; x >= 0; x--)
+            {
+                if (y != 0)
+                    powerBlocks[y, x].CheckUp(powerBlocks[y - 1, x]);
+                if (y != powerBlocks.GetLength(0) - 1)
+                    powerBlocks[y, x].CheckDown(powerBlocks[y + 1, x]);
+                if (x != 0)
+                    powerBlocks[y, x].CheckLeft(powerBlocks[y, x - 1]);
+                if (x != powerBlocks.GetLength(1) - 1)
+                    powerBlocks[y, x].CheckRight(powerBlocks[y, x + 1]);
+
+                powerBlocks[y, x].ResolvePoweredStatus();
+
 
                 if (y == 2 && x == 0)
                     powerBlocks[y, x].CheckStart();
