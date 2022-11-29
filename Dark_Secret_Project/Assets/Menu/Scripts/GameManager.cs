@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //static gameobject
+    public SceneInfo SceneInfo;
+
     public void QuitGame()
     {
         Application.Quit();
@@ -20,5 +23,8 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+    public void LoadLatestScene()
+    {
+        SceneManager.LoadScene(SceneInfo.previousScene);
+    }
 }

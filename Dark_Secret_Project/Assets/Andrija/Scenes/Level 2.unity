@@ -2646,7 +2646,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e57ad2fa23da0924b8fd5a21df5112a5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e57ad2fa23da0924b8fd5a21df5112a5,
         type: 3}
@@ -5416,7 +5416,7 @@ PrefabInstance:
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.012
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
@@ -5426,7 +5426,7 @@ PrefabInstance:
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.96
+      value: -4.086
       objectReference: {fileID: 0}
     - target: {fileID: 2683195716791022646, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
@@ -5716,6 +5716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9b33b8005fc6d42ba6fcb98f7a184b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sceneinfo: {fileID: 11400000, guid: abc5954cac417ae46b1f9b9fe91083a5, type: 2}
 --- !u!65 &2005239519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5792,7 +5793,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 270.024, z: 0}
 --- !u!1 &2007028245
 GameObject:
