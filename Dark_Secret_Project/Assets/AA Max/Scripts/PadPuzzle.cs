@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PadPuzzle : MonoBehaviour
 {
@@ -127,7 +128,7 @@ public class PadPuzzle : MonoBehaviour
         Duration = remainingDuration = 0;
         clockActive = false;
         failure.Play();
-        
+        SceneManager.LoadScene(3);
     }
 
     //om du löser puzzlet innan tiden tagit slut

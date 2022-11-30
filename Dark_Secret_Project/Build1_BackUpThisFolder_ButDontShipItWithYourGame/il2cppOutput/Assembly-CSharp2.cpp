@@ -295,8 +295,6 @@ struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
 struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2;
 // UnityEngine.EventSystems.EventSystem
 struct EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707;
-// FadeScript
-struct FadeScript_t9E599AF1EB3628A9AB11864C76DE8D6E42080814;
 // BNG.FloatEvent
 struct FloatEvent_tB5BBD837F83AC37CEE0C4C7087E97829D38315F0;
 // BNG.FloatFloatEvent
@@ -3511,8 +3509,8 @@ struct BNGPlayerController_t9093D731F0BBC6A4DA623F3127D95A13803945E4  : public M
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___mainCamera_32;
 	// UnityEngine.Vector3 BNG.BNGPlayerController::_initialPosition
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____initialPosition_33;
-	// FadeScript BNG.BNGPlayerController::FdScrpt
-	FadeScript_t9E599AF1EB3628A9AB11864C76DE8D6E42080814* ___FdScrpt_34;
+	// BNG.ScreenFader BNG.BNGPlayerController::FdScrpt
+	ScreenFader_t9090DFCB96F1514D2239473243AAE55D508A6B85* ___FdScrpt_34;
 	// System.Single BNG.BNGPlayerController::SphereColliderRadius
 	float ___SphereColliderRadius_35;
 	// UnityEngine.Vector3 BNG.BNGPlayerController::moveTest

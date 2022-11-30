@@ -1142,6 +1142,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3988018299876449959, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3988018299876449959, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
+        type: 3}
+      propertyPath: JumpInput.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4584237520312265845, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
         type: 3}
       propertyPath: SceneFadeInDelay
@@ -1152,6 +1162,16 @@ PrefabInstance:
       propertyPath: FdScrpt
       value: 
       objectReference: {fileID: 2060860931}
+    - target: {fileID: 8393157889221050404, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393157889221050404, guid: fdf0b2c377ea0384ca1cfb12de3bea71,
+        type: 3}
+      propertyPath: YKeySlowsTime
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf0b2c377ea0384ca1cfb12de3bea71, type: 3}
 --- !u!1 &301666405

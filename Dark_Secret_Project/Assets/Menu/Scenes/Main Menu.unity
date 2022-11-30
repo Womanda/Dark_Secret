@@ -1431,6 +1431,7 @@ MonoBehaviour:
     type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!114 &648747573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2079,6 +2080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338f09ffc1b70fd4db8d53a439d0a603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneInfo: {fileID: 11400000, guid: abc5954cac417ae46b1f9b9fe91083a5, type: 2}
 --- !u!4 &1274251480
 Transform:
   m_ObjectHideFlags: 0
@@ -2107,7 +2109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionTime: 3.5
-  screenFader: {fileID: 0}
+  screenFader: {fileID: 2088878489}
   Door: {fileID: 78705987}
   Title: {fileID: 1013924813}
   MenuScreen: {fileID: 182341134}
@@ -2876,7 +2878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Music
+  m_text: Sound
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28b31bf1d9bf4ec438210de827b960ea, type: 2}
   m_sharedMaterial: {fileID: 1537222994553881268, guid: 28b31bf1d9bf4ec438210de827b960ea,
@@ -4290,6 +4292,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070199125}
   m_CullTransparentMesh: 1
+--- !u!114 &2088878489 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2583770082765698215, guid: 6e9d972a00214a74cb25091905b7f270,
+    type: 3}
+  m_PrefabInstance: {fileID: 1192363422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac09bf699d4234448aa42c086c9f964c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2105379295
 GameObject:
   m_ObjectHideFlags: 0

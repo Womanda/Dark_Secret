@@ -2848,6 +2848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338f09ffc1b70fd4db8d53a439d0a603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneInfo: {fileID: 0}
 --- !u!1 &517137975901937242
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,7 +3154,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Music
+  m_text: Sound
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28b31bf1d9bf4ec438210de827b960ea, type: 2}
   m_sharedMaterial: {fileID: 1537222994553881268, guid: 28b31bf1d9bf4ec438210de827b960ea,
