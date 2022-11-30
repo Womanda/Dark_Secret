@@ -95,6 +95,8 @@ struct RaycastWeapon_tE6CA7DE0198C91F246721AF51AA79070E4DBF160;
 struct Rigidbody_t268697F5A994213ED97393309870968BC1C7393C;
 // System.Runtime.Serialization.SafeSerializationManager
 struct SafeSerializationManager_tCBB85B95DFD1634237140CD892E82D06ECB3F5E6;
+// SceneInfo
+struct SceneInfo_tC4A3002977FAC0450F8B2EFAEAB1FF856F85126A;
 // System.String
 struct String_t;
 // UnityEngine.Transform
@@ -574,6 +576,19 @@ struct GameObject_t76FEDD663AB33C991A9C9A23129337651094216F  : public Object_tC1
 {
 };
 
+// UnityEngine.ScriptableObject
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A  : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C
+{
+};
+// Native definition for P/Invoke marshalling of UnityEngine.ScriptableObject
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_pinvoke : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of UnityEngine.ScriptableObject
+struct ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A_marshaled_com : public Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
+{
+};
+
 // System.SystemException
 struct SystemException_tCC48D868298F4C0705279823E34B00F4FBDB7295  : public Exception_t
 {
@@ -592,6 +607,13 @@ struct NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A  : public
 // UnityEngine.Rigidbody
 struct Rigidbody_t268697F5A994213ED97393309870968BC1C7393C  : public Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3
 {
+};
+
+// SceneInfo
+struct SceneInfo_tC4A3002977FAC0450F8B2EFAEAB1FF856F85126A  : public ScriptableObject_tB3BFDB921A1B1795B38A5417D3B97A89A140436A
+{
+	// System.Int32 SceneInfo::previousScene
+	int32_t ___previousScene_4;
 };
 
 // UnityEngine.Transform
@@ -979,60 +1001,62 @@ struct WeaponSlide_t4D8D93DBB6A884D1EFB180AFCF8D5F5DA4A233A2  : public MonoBehav
 // BNG.ZiplineShoot
 struct ZiplineShoot_t0B6D89259876B502F0DE62CE9095C18C95501B52  : public GrabbableEvents_t41DE687F96D29CBCA222FCBA34DE0134B5D87FF6
 {
+	// SceneInfo BNG.ZiplineShoot::Sceneinfo
+	SceneInfo_tC4A3002977FAC0450F8B2EFAEAB1FF856F85126A* ___Sceneinfo_7;
 	// BNG.JointHelper BNG.ZiplineShoot::jntHlp
-	JointHelper_t43AD5DE5697B3A72DF8879D027C229D27262DD32* ___jntHlp_7;
+	JointHelper_t43AD5DE5697B3A72DF8879D027C229D27262DD32* ___jntHlp_8;
 	// System.Single BNG.ZiplineShoot::MaxRange
-	float ___MaxRange_8;
+	float ___MaxRange_9;
 	// System.Single BNG.ZiplineShoot::Damage
-	float ___Damage_9;
+	float ___Damage_10;
 	// BNG.FiringType BNG.ZiplineShoot::FiringMethod
-	int32_t ___FiringMethod_10;
+	int32_t ___FiringMethod_11;
 	// BNG.ReloadType BNG.ZiplineShoot::ReloadMethod
-	int32_t ___ReloadMethod_11;
+	int32_t ___ReloadMethod_12;
 	// System.Single BNG.ZiplineShoot::FiringRate
-	float ___FiringRate_12;
+	float ___FiringRate_13;
 	// System.Single BNG.ZiplineShoot::lastShotTime
-	float ___lastShotTime_13;
+	float ___lastShotTime_14;
 	// System.Single BNG.ZiplineShoot::BulletImpactForce
-	float ___BulletImpactForce_14;
+	float ___BulletImpactForce_15;
 	// System.Single BNG.ZiplineShoot::InternalAmmo
-	float ___InternalAmmo_15;
+	float ___InternalAmmo_16;
 	// System.Single BNG.ZiplineShoot::MaxInternalAmmo
-	float ___MaxInternalAmmo_16;
+	float ___MaxInternalAmmo_17;
 	// System.Boolean BNG.ZiplineShoot::AutoChamberRounds
-	bool ___AutoChamberRounds_17;
+	bool ___AutoChamberRounds_18;
 	// System.Boolean BNG.ZiplineShoot::AlwaysFireProjectile
-	bool ___AlwaysFireProjectile_18;
+	bool ___AlwaysFireProjectile_19;
 	// System.Single BNG.ZiplineShoot::SlowMoRateOfFire
-	float ___SlowMoRateOfFire_19;
+	float ___SlowMoRateOfFire_20;
 	// System.Single BNG.ZiplineShoot::ShotForce
-	float ___ShotForce_20;
+	float ___ShotForce_21;
 	// System.Single BNG.ZiplineShoot::BulletCasingForce
-	float ___BulletCasingForce_21;
+	float ___BulletCasingForce_22;
 	// UnityEngine.Vector3 BNG.ZiplineShoot::RecoilForce
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___RecoilForce_22;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___RecoilForce_23;
 	// System.Single BNG.ZiplineShoot::RecoilDuration
-	float ___RecoilDuration_23;
+	float ___RecoilDuration_24;
 	// UnityEngine.Rigidbody BNG.ZiplineShoot::weaponRigid
-	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___weaponRigid_24;
+	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* ___weaponRigid_25;
 	// UnityEngine.LayerMask BNG.ZiplineShoot::ValidLayers
-	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___ValidLayers_25;
+	LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB ___ValidLayers_26;
 	// UnityEngine.Transform BNG.ZiplineShoot::TriggerTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___TriggerTransform_26;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___TriggerTransform_27;
 	// System.Boolean BNG.ZiplineShoot::BulletInChamber
-	bool ___BulletInChamber_27;
+	bool ___BulletInChamber_28;
 	// UnityEngine.Events.UnityEvent BNG.ZiplineShoot::onShootEvent
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___onShootEvent_28;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___onShootEvent_29;
 	// System.Boolean BNG.ZiplineShoot::slideForcedBack
-	bool ___slideForcedBack_29;
+	bool ___slideForcedBack_30;
 	// BNG.WeaponSlide BNG.ZiplineShoot::ws
-	WeaponSlide_t4D8D93DBB6A884D1EFB180AFCF8D5F5DA4A233A2* ___ws_30;
+	WeaponSlide_t4D8D93DBB6A884D1EFB180AFCF8D5F5DA4A233A2* ___ws_31;
 	// System.Boolean BNG.ZiplineShoot::readyToShoot
-	bool ___readyToShoot_31;
+	bool ___readyToShoot_32;
 	// System.Boolean BNG.ZiplineShoot::playedEmptySound
-	bool ___playedEmptySound_32;
+	bool ___playedEmptySound_33;
 	// System.Collections.IEnumerator BNG.ZiplineShoot::shotRoutine
-	RuntimeObject* ___shotRoutine_33;
+	RuntimeObject* ___shotRoutine_34;
 };
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -1258,8 +1282,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_Start_mF8FDCFBCCCB5B847B083
 		// weaponRigid = GetComponent<Rigidbody>();
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_0;
 		L_0 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
-		__this->___weaponRigid_24 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___weaponRigid_24), (void*)L_0);
+		__this->___weaponRigid_25 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___weaponRigid_25), (void*)L_0);
+		// Sceneinfo.previousScene = 1;
+		SceneInfo_tC4A3002977FAC0450F8B2EFAEAB1FF856F85126A* L_1 = __this->___Sceneinfo_7;
+		NullCheck(L_1);
+		L_1->___previousScene_4 = 1;
 		// }
 		return;
 	}
@@ -1280,7 +1308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_OnTrigger_m69887D92B2427F5F
 		L_1 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_0, NULL);
 		___triggerValue0 = L_1;
 		// if (TriggerTransform) {
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___TriggerTransform_26;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = __this->___TriggerTransform_27;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_2, NULL);
@@ -1291,7 +1319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_OnTrigger_m69887D92B2427F5F
 	}
 	{
 		// TriggerTransform.localEulerAngles = new Vector3(triggerValue * 15, 0, 0);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4 = __this->___TriggerTransform_26;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4 = __this->___TriggerTransform_27;
 		float L_5 = ___triggerValue0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
 		memset((&L_6), 0, sizeof(L_6));
@@ -1311,15 +1339,15 @@ IL_0036:
 	}
 	{
 		// readyToShoot = true;
-		__this->___readyToShoot_31 = (bool)1;
+		__this->___readyToShoot_32 = (bool)1;
 		// playedEmptySound = false;
-		__this->___playedEmptySound_32 = (bool)0;
+		__this->___playedEmptySound_33 = (bool)0;
 	}
 
 IL_0051:
 	{
 		// if (readyToShoot && triggerValue >= 0.75f) {
-		bool L_8 = __this->___readyToShoot_31;
+		bool L_8 = __this->___readyToShoot_32;
 		if (!L_8)
 		{
 			goto IL_0076;
@@ -1336,8 +1364,8 @@ IL_0051:
 		// Shoot();
 		VirtualActionInvoker0::Invoke(27 /* System.Void BNG.ZiplineShoot::Shoot() */, __this);
 		// readyToShoot = FiringMethod == FiringType.Automatic;
-		int32_t L_10 = __this->___FiringMethod_10;
-		__this->___readyToShoot_31 = (bool)((((int32_t)L_10) == ((int32_t)1))? 1 : 0);
+		int32_t L_10 = __this->___FiringMethod_11;
+		__this->___readyToShoot_32 = (bool)((((int32_t)L_10) == ((int32_t)1))? 1 : 0);
 	}
 
 IL_0076:
@@ -1370,14 +1398,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_Shoot_mC74941E69942EE3E6D46
 		}
 	}
 	{
-		float L_1 = __this->___FiringRate_12;
+		float L_1 = __this->___FiringRate_13;
 		G_B3_0 = L_1;
 		goto IL_001a;
 	}
 
 IL_0014:
 	{
-		float L_2 = __this->___SlowMoRateOfFire_19;
+		float L_2 = __this->___SlowMoRateOfFire_20;
 		G_B3_0 = L_2;
 	}
 
@@ -1387,7 +1415,7 @@ IL_001a:
 		// if (Time.time - lastShotTime < shotInterval) {
 		float L_3;
 		L_3 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		float L_4 = __this->___lastShotTime_13;
+		float L_4 = __this->___lastShotTime_14;
 		float L_5 = V_0;
 		if ((!(((float)((float)il2cpp_codegen_subtract(L_3, L_4))) < ((float)L_5))))
 		{
@@ -1424,13 +1452,13 @@ IL_002b:
 IL_005e:
 	{
 		// BulletInChamber = true;
-		__this->___BulletInChamber_27 = (bool)1;
+		__this->___BulletInChamber_28 = (bool)1;
 		// jntHlp.LockXRotation = true;
-		JointHelper_t43AD5DE5697B3A72DF8879D027C229D27262DD32* L_11 = __this->___jntHlp_7;
+		JointHelper_t43AD5DE5697B3A72DF8879D027C229D27262DD32* L_11 = __this->___jntHlp_8;
 		NullCheck(L_11);
 		L_11->___LockXRotation_10 = (bool)1;
 		// if (AutoChamberRounds) {
-		bool L_12 = __this->___AutoChamberRounds_17;
+		bool L_12 = __this->___AutoChamberRounds_18;
 		if (!L_12)
 		{
 			goto IL_007f;
@@ -1444,7 +1472,7 @@ IL_005e:
 IL_007f:
 	{
 		// if(onShootEvent != null) {
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_13 = __this->___onShootEvent_28;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_13 = __this->___onShootEvent_29;
 		if (!L_13)
 		{
 			goto IL_0092;
@@ -1452,7 +1480,7 @@ IL_007f:
 	}
 	{
 		// onShootEvent.Invoke();
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_14 = __this->___onShootEvent_28;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_14 = __this->___onShootEvent_29;
 		NullCheck(L_14);
 		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_14, NULL);
 	}
@@ -1462,7 +1490,7 @@ IL_0092:
 		// lastShotTime = Time.time;
 		float L_15;
 		L_15 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		__this->___lastShotTime_13 = L_15;
+		__this->___lastShotTime_14 = L_15;
 		// }
 		return;
 	}
@@ -1478,7 +1506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ZiplineShoot_GetBulletCount_m2D2BE2F3
 	}
 	{
 		// if (ReloadMethod == ReloadType.InfiniteAmmo) {
-		int32_t L_0 = __this->___ReloadMethod_11;
+		int32_t L_0 = __this->___ReloadMethod_12;
 		if (L_0)
 		{
 			goto IL_000e;
@@ -1492,7 +1520,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ZiplineShoot_GetBulletCount_m2D2BE2F3
 IL_000e:
 	{
 		// else if (ReloadMethod == ReloadType.InternalAmmo) {
-		int32_t L_1 = __this->___ReloadMethod_11;
+		int32_t L_1 = __this->___ReloadMethod_12;
 		if ((!(((uint32_t)L_1) == ((uint32_t)2))))
 		{
 			goto IL_001f;
@@ -1500,14 +1528,14 @@ IL_000e:
 	}
 	{
 		// return (int)InternalAmmo;
-		float L_2 = __this->___InternalAmmo_15;
+		float L_2 = __this->___InternalAmmo_16;
 		return il2cpp_codegen_cast_double_to_int<int32_t>(L_2);
 	}
 
 IL_001f:
 	{
 		// else if (ReloadMethod == ReloadType.ManualClip) {
-		int32_t L_3 = __this->___ReloadMethod_11;
+		int32_t L_3 = __this->___ReloadMethod_12;
 		// return GetComponentsInChildren<Bullet>(false).Length;
 		BulletU5BU5D_t4E28EDDD1E1856177C0998A5A1182CDCCDA1679D* L_4;
 		L_4 = Component_GetComponentsInChildren_TisBullet_tDA8F70B4CF20816451F39C9E08B1BC2B1C82819C_m27E3F3A7B0ED8166BB2EE119CF2933ACAF2D5DEF(__this, (bool)0, Component_GetComponentsInChildren_TisBullet_tDA8F70B4CF20816451F39C9E08B1BC2B1C82819C_m27E3F3A7B0ED8166BB2EE119CF2933ACAF2D5DEF_RuntimeMethod_var);
@@ -1528,7 +1556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_RemoveBullet_mABCA9FC18C43B
 	Bullet_tDA8F70B4CF20816451F39C9E08B1BC2B1C82819C* V_0 = NULL;
 	{
 		// if (ReloadMethod == ReloadType.InfiniteAmmo) {
-		int32_t L_0 = __this->___ReloadMethod_11;
+		int32_t L_0 = __this->___ReloadMethod_12;
 		if (L_0)
 		{
 			goto IL_0009;
@@ -1542,7 +1570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_RemoveBullet_mABCA9FC18C43B
 IL_0009:
 	{
 		// else if (ReloadMethod == ReloadType.InternalAmmo) {
-		int32_t L_1 = __this->___ReloadMethod_11;
+		int32_t L_1 = __this->___ReloadMethod_12;
 		if ((!(((uint32_t)L_1) == ((uint32_t)2))))
 		{
 			goto IL_0025;
@@ -1550,15 +1578,15 @@ IL_0009:
 	}
 	{
 		// InternalAmmo--;
-		float L_2 = __this->___InternalAmmo_15;
-		__this->___InternalAmmo_15 = ((float)il2cpp_codegen_subtract(L_2, (1.0f)));
+		float L_2 = __this->___InternalAmmo_16;
+		__this->___InternalAmmo_16 = ((float)il2cpp_codegen_subtract(L_2, (1.0f)));
 		return;
 	}
 
 IL_0025:
 	{
 		// else if (ReloadMethod == ReloadType.ManualClip) {
-		int32_t L_3 = __this->___ReloadMethod_11;
+		int32_t L_3 = __this->___ReloadMethod_12;
 		if ((!(((uint32_t)L_3) == ((uint32_t)1))))
 		{
 			goto IL_004a;
@@ -1600,8 +1628,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_Reload_m06E7AAC75F82C1B701F
 {
 	{
 		// InternalAmmo = MaxInternalAmmo;
-		float L_0 = __this->___MaxInternalAmmo_16;
-		__this->___InternalAmmo_15 = L_0;
+		float L_0 = __this->___MaxInternalAmmo_17;
+		__this->___InternalAmmo_16 = L_0;
 		// }
 		return;
 	}
@@ -1623,14 +1651,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_chamberRound_mFB7C1751504AE
 		// RemoveBullet();
 		VirtualActionInvoker0::Invoke(29 /* System.Void BNG.ZiplineShoot::RemoveBullet() */, __this);
 		// BulletInChamber = true;
-		__this->___BulletInChamber_27 = (bool)1;
+		__this->___BulletInChamber_28 = (bool)1;
 		return;
 	}
 
 IL_0017:
 	{
 		// BulletInChamber = false;
-		__this->___BulletInChamber_27 = (bool)0;
+		__this->___BulletInChamber_28 = (bool)0;
 		// }
 		return;
 	}
@@ -1642,7 +1670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot_OnWeaponCharged_m4799700A03
 		// chamberRound();
 		ZiplineShoot_chamberRound_mFB7C1751504AE1410FCF332E02FD807686691CF7(__this, NULL);
 		// slideForcedBack = false;
-		__this->___slideForcedBack_29 = (bool)0;
+		__this->___slideForcedBack_30 = (bool)0;
 		// }
 		return;
 	}
@@ -1652,31 +1680,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZiplineShoot__ctor_mC737419423B72C15DA53
 {
 	{
 		// public float MaxRange = 25f;
-		__this->___MaxRange_8 = (25.0f);
+		__this->___MaxRange_9 = (25.0f);
 		// public float Damage = 25f;
-		__this->___Damage_9 = (25.0f);
+		__this->___Damage_10 = (25.0f);
 		// public float FiringRate = 2.4f;
-		__this->___FiringRate_12 = (2.4000001f);
+		__this->___FiringRate_13 = (2.4000001f);
 		// public float BulletImpactForce = 1000f;
-		__this->___BulletImpactForce_14 = (1000.0f);
+		__this->___BulletImpactForce_15 = (1000.0f);
 		// public float MaxInternalAmmo = 10;
-		__this->___MaxInternalAmmo_16 = (10.0f);
+		__this->___MaxInternalAmmo_17 = (10.0f);
 		// public bool AutoChamberRounds = true;
-		__this->___AutoChamberRounds_17 = (bool)1;
+		__this->___AutoChamberRounds_18 = (bool)1;
 		// public float SlowMoRateOfFire = 0.3f;
-		__this->___SlowMoRateOfFire_19 = (0.300000012f);
+		__this->___SlowMoRateOfFire_20 = (0.300000012f);
 		// public float ShotForce = 10f;
-		__this->___ShotForce_20 = (10.0f);
+		__this->___ShotForce_21 = (10.0f);
 		// public float BulletCasingForce = 3f;
-		__this->___BulletCasingForce_21 = (3.0f);
+		__this->___BulletCasingForce_22 = (3.0f);
 		// public Vector3 RecoilForce = Vector3.zero;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
 		L_0 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
-		__this->___RecoilForce_22 = L_0;
+		__this->___RecoilForce_23 = L_0;
 		// public float RecoilDuration = 0.3f;
-		__this->___RecoilDuration_23 = (0.300000012f);
+		__this->___RecoilDuration_24 = (0.300000012f);
 		// protected bool readyToShoot = true;
-		__this->___readyToShoot_31 = (bool)1;
+		__this->___readyToShoot_32 = (bool)1;
 		GrabbableEvents__ctor_mF47EE9A8DE1824F2DC070FE888F6201056419298(__this, NULL);
 		return;
 	}

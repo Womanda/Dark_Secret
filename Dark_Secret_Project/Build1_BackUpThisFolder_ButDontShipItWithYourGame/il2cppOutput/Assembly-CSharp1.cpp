@@ -251,8 +251,6 @@ struct ControllerModelSelector_tABBEBF8E263B904F6E5A28B82436A4A33F38B7D2;
 struct Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B;
 // System.DelegateData
 struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
-// FadeScript
-struct FadeScript_t9E599AF1EB3628A9AB11864C76DE8D6E42080814;
 // BNG.FingerTipCollider
 struct FingerTipCollider_t5DB427F885275AE58D30EB52075FF76F5D5FA6A8;
 // UnityEngine.FixedJoint
@@ -2136,8 +2134,8 @@ struct BNGPlayerController_t9093D731F0BBC6A4DA623F3127D95A13803945E4  : public M
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___mainCamera_32;
 	// UnityEngine.Vector3 BNG.BNGPlayerController::_initialPosition
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ____initialPosition_33;
-	// FadeScript BNG.BNGPlayerController::FdScrpt
-	FadeScript_t9E599AF1EB3628A9AB11864C76DE8D6E42080814* ___FdScrpt_34;
+	// BNG.ScreenFader BNG.BNGPlayerController::FdScrpt
+	ScreenFader_t9090DFCB96F1514D2239473243AAE55D508A6B85* ___FdScrpt_34;
 	// System.Single BNG.BNGPlayerController::SphereColliderRadius
 	float ___SphereColliderRadius_35;
 	// UnityEngine.Vector3 BNG.BNGPlayerController::moveTest
@@ -2192,15 +2190,6 @@ struct ControllerModelSelector_tABBEBF8E263B904F6E5A28B82436A4A33F38B7D2  : publ
 	int32_t ___disableIndex_4;
 	// System.Boolean BNG.ControllerModelSelector::isQuitting
 	bool ___isQuitting_5;
-};
-
-// FadeScript
-struct FadeScript_t9E599AF1EB3628A9AB11864C76DE8D6E42080814  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
-{
-	// BNG.ScreenFader FadeScript::scrnFader
-	ScreenFader_t9090DFCB96F1514D2239473243AAE55D508A6B85* ___scrnFader_4;
-	// System.Boolean FadeScript::CCStart
-	bool ___CCStart_5;
 };
 
 // BNG.GrabPoint
@@ -3992,8 +3981,6 @@ inline PlayerClimbing_t79DA0F55786A86F473DE36C7BE663C014854F0CB* Component_GetCo
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CharacterController_set_height_m7F8FCAFE75439842BAC1FFA1E302EFD812D170FB (CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* __this, float ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.CapsuleCollider::set_height(System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CapsuleCollider_set_height_m5DAE3DC5AD851E30C5A29AC7A22F36BE1E205BBB (CapsuleCollider_t3A1671C74F0836ABEF5D01A7470B5B2BE290A808* __this, float ___value0, const RuntimeMethod* method) ;
-// System.Void FadeScript::fadeFunc()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FadeScript_fadeFunc_m04D01B140AC806450B23F366C077F22562E8C2F3 (FadeScript_t9E599AF1EB3628A9AB11864C76DE8D6E42080814* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Debug::Log(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___message0, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::op_UnaryNegation(UnityEngine.Vector3)
@@ -7699,10 +7686,10 @@ IL_001b:
 
 IL_0069:
 	{
-		// FdScrpt.fadeFunc();
-		FadeScript_t9E599AF1EB3628A9AB11864C76DE8D6E42080814* L_14 = __this->___FdScrpt_34;
+		// FdScrpt.DoFadeOut();
+		ScreenFader_t9090DFCB96F1514D2239473243AAE55D508A6B85* L_14 = __this->___FdScrpt_34;
 		NullCheck(L_14);
-		FadeScript_fadeFunc_m04D01B140AC806450B23F366C077F22562E8C2F3(L_14, NULL);
+		VirtualActionInvoker0::Invoke(6 /* System.Void BNG.ScreenFader::DoFadeOut() */, L_14);
 	}
 
 IL_0074:
