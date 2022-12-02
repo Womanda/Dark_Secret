@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/DarkSecret/Scenes/Retry Scene.unity
     guid: cfa76802e24f41b4e81d6a05ecfed6b3
   m_configObjects:
-    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 75b965f05625ed145a3fa127b1c1357c,
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 95738646979e66347937d1a88ead7f33,
       type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 2ec24d39f7b5ac84aad7e5df7b4fd3ea,
       type: 2}
