@@ -24944,6 +24944,7 @@ GameObject:
   - component: {fileID: 8624403585595614539}
   - component: {fileID: 8624403585595614534}
   - component: {fileID: 344477045679739780}
+  - component: {fileID: 7011368165718928701}
   m_Layer: 0
   m_Name: XR Rig Phone
   m_TagString: Untagged
@@ -24983,7 +24984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49877b2c8de1d6e4ebc9ca5d8ea02d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: 0
+  InputSource: 2
   actionSet: {fileID: -944628639613478452, guid: e39f4b35a6db18348b41eb0262520e69,
     type: 3}
   TrackingOrigin: 2
@@ -25110,6 +25111,25 @@ MonoBehaviour:
   HMDIsActive: 0
   LeftControllerPosition: {x: -0.2, y: -0.2, z: 0.5}
   RightControllerPosition: {x: 0.2, y: -0.2, z: 0.5}
+--- !u!114 &7011368165718928701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2448678664417969613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27991c206a5e66147bb8ee3ef31c8bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actionSet:
+    actionSetPath: /actions/VRIF
+  forSources: 0
+  disableAllOtherActionSets: 1
+  activateOnStart: 1
+  deactivateOnDestroy: 1
+  initialPriority: 0
 --- !u!1 &2448678664453802915
 GameObject:
   m_ObjectHideFlags: 0
