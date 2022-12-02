@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace BNG {
     public class HingeHelper : GrabbableEvents {
@@ -27,7 +28,7 @@ namespace BNG {
         public float SnapHaptics = 0.5f;
 
         [Header("Text Label (Optional)")]
-        public Text LabelToUpdate;
+        public TMP_Text LabelToUpdate;
 
         [Header("Change Events")]
         public FloatEvent onHingeChange;

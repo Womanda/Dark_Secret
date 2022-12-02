@@ -130,6 +130,9 @@ namespace BNG {
 
         private Vector3 _initialPosition;
 
+        public ScreenFader FdScrpt;
+
+
         void Start() {
             characterController = GetComponentInChildren<CharacterController>();
             playerRigid = GetComponent<Rigidbody>();
@@ -209,18 +212,25 @@ namespace BNG {
             if(MinElevation == 0 && MaxElevation == 0) {
                 return;
             }
+            if (characterController != null && (characterController.transform.position.y < MinElevation + 11 || characterController.transform.position.y > MaxElevation))
+            {
+                //fade to black here
+                FdScrpt.DoFadeOut();
 
+            }
             // Check Elevation based on Character Controller height
-            if(characterController != null && (characterController.transform.position.y < MinElevation || characterController.transform.position.y > MaxElevation)) {
+            if (characterController != null && (characterController.transform.position.y < MinElevation || characterController.transform.position.y > MaxElevation)) {
                 Debug.Log("Player out of bounds; Returning to initial position.");
+                //fade to black here
                 characterController.transform.position = _initialPosition;
+                
             }
 			
             // Check Elevation based on Character Controller height
             if(playerRigid != null && (playerRigid.transform.position.y < MinElevation || playerRigid.transform.position.y > MaxElevation)) {
                 Debug.Log("Player out of bounds; Returning to initial position.");
                 playerRigid.transform.position = _initialPosition;
-            }			
+            }            
         }
 
         public virtual void UpdateDistanceFromGround() {

@@ -5,24 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/XR Demo.unity
-    guid: a1360534006d3f845bc79b46b93cfec5
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/Scene Transitioning.unity
-    guid: 9d7c9629abf9c99449e358b0938b47d0
   - enabled: 1
-    path: Assets/BNG Framework/Scenes/Physics Hands.unity
-    guid: 34a4579517c578e4080d0a6ef2c96294
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/Rigidbody Player.unity
-    guid: 57fc97c5771a777449aa8bd02514df22
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/Vehicle Example.unity
-    guid: d96233ee44d985d4fb8dc23a907c06eb
-  - enabled: 0
-    path: Assets/BNG Framework/Scenes/Quest Demo.unity
-    guid: eac0312c32df12949a47d07747a9d1cd
+    path: Assets/DarkSecret/Scenes/Main Menu.unity
+    guid: 7eaa2f60bbec3f44e84b8a900d7b92e6
+  - enabled: 1
+    path: Assets/DarkSecret/Scenes/FInalLevel 1.unity
+    guid: 1ef2faedb88cbfc48af602664dd7de10
+  - enabled: 1
+    path: Assets/DarkSecret/Scenes/Level 2.unity
+    guid: a7123175c1040264c8323af3fe4eff6f
+  - enabled: 1
+    path: Assets/DarkSecret/Scenes/Level 3.unity
+    guid: b5248128fc72ea448ac16ce61c41d682
+  - enabled: 1
+    path: Assets/DarkSecret/Scenes/Basement.unity
+    guid: d47bf4abe537e3c4eb7a38ea90338cd5
+  - enabled: 1
+    path: Assets/DarkSecret/Scenes/End Menu.unity
+    guid: a5cfc0bfd0d65884baf929b6ed82fbdf
+  - enabled: 1
+    path: Assets/DarkSecret/Scenes/Retry Scene.unity
+    guid: cfa76802e24f41b4e81d6a05ecfed6b3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 95738646979e66347937d1a88ead7f33,
       type: 2}
