@@ -195,6 +195,7 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\Lander\Documents\GitHub\Dark_Secret\Dark_Secret_Project\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\Users\Lander\Documents\GitHub\Dark_Secret\Dark_Secret_Project\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.RuntimeDebugger.dll
 --root-assembly=C:\Users\Lander\Documents\GitHub\Dark_Secret\Dark_Secret_Project\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
+--root-assembly=C:\Users\Lander\Documents\GitHub\Dark_Secret\Dark_Secret_Project\Temp\StagingArea\Data\Managed\Assembly-CSharp-firstpass.dll
 --root-assembly=C:\Users\Lander\Documents\GitHub\Dark_Secret\Dark_Secret_Project\Temp\StagingArea\Data\Managed\Unity.XR.OpenXR.Features.OculusQuestSupport.dll
 --root-assembly=C:\Users\Lander\Documents\GitHub\Dark_Secret\Dark_Secret_Project\Temp\StagingArea\Data\Managed\BNGHandPoseID.dll
 --assembly-folder=C:\Users\Lander\Documents\GitHub\Dark_Secret\Dark_Secret_Project\Temp\StagingArea\Data\Managed\
